@@ -26,6 +26,5 @@
 - (void)createDefaultGMGBlogs;
 - (Blog *)getBlogWithID:(NSNumber *)blogID;
 - (void)fetchPostsForBlog:(Blog *)blog;
-- (void)loadImage:(Image *)image;
 
 @end
