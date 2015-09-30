@@ -46,19 +46,19 @@
 			containerPortal = 91E4CBEB1BB943600059C79B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 91E4CBF21BB943600059C79B;
-			remoteInfo = "Kinja Top Posts";
+			remoteInfo = "Kinja-Top-Posts";
 		};
 		91E4CC1B1BB943600059C79B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91E4CBEB1BB943600059C79B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 91E4CBF21BB943600059C79B;
-			remoteInfo = "Kinja Top Posts";
+			remoteInfo = "Kinja-Top-Posts";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		91E4CBF31BB943600059C79B /* Kinja Top Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kinja Top Posts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E4CBF31BB943600059C79B /* Kinja-Top-Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kinja-Top-Posts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E4CBF71BB943600059C79B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91E4CBF91BB943600059C79B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		91E4CBFA1BB943600059C79B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,10 +69,10 @@
 		91E4CC051BB943600059C79B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91E4CC081BB943600059C79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E4CC0A1BB943600059C79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91E4CC0F1BB943600059C79B /* Kinja Top PostsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kinja Top PostsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E4CC0F1BB943600059C79B /* Kinja-Top-Posts.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kinja-Top-Posts.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E4CC131BB943600059C79B /* Kinja_Top_PostsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kinja_Top_PostsTests.m; sourceTree = "<group>"; };
 		91E4CC151BB943600059C79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91E4CC1A1BB943600059C79B /* Kinja Top PostsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kinja Top PostsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E4CC1A1BB943600059C79B /* Kinja-Top-Posts.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kinja-Top-Posts.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E4CC1E1BB943600059C79B /* Kinja_Top_PostsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kinja_Top_PostsUITests.m; sourceTree = "<group>"; };
 		91E4CC201BB943600059C79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91E4CC2C1BB949E20059C79B /* PMN_Caecilia_45_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PMN_Caecilia_45_Light.ttf; sourceTree = "<group>"; };
@@ -143,9 +143,9 @@
 		91E4CBEA1BB943600059C79B = {
 			isa = PBXGroup;
 			children = (
-				91E4CBF51BB943600059C79B /* Kinja Top Posts */,
-				91E4CC121BB943600059C79B /* Kinja Top PostsTests */,
-				91E4CC1D1BB943600059C79B /* Kinja Top PostsUITests */,
+				91E4CBF51BB943600059C79B /* Kinja-Top-Posts */,
+				91E4CC121BB943600059C79B /* Kinja-Top-PostsTests */,
+				91E4CC1D1BB943600059C79B /* Kinja-Top-PostsUITests */,
 				91E4CBF41BB943600059C79B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,14 +153,14 @@
 		91E4CBF41BB943600059C79B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91E4CBF31BB943600059C79B /* Kinja Top Posts.app */,
-				91E4CC0F1BB943600059C79B /* Kinja Top PostsTests.xctest */,
-				91E4CC1A1BB943600059C79B /* Kinja Top PostsUITests.xctest */,
+				91E4CBF31BB943600059C79B /* Kinja-Top-Posts.app */,
+				91E4CC0F1BB943600059C79B /* Kinja-Top-Posts.xctest */,
+				91E4CC1A1BB943600059C79B /* Kinja-Top-Posts.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		91E4CBF51BB943600059C79B /* Kinja Top Posts */ = {
+		91E4CBF51BB943600059C79B /* Kinja-Top-Posts */ = {
 			isa = PBXGroup;
 			children = (
 				91F68BC51BBAE04B00C2669B /* Fabric.framework */,
@@ -178,7 +178,7 @@
 				91E4CC071BB943600059C79B /* LaunchScreen.storyboard */,
 				91E4CBF61BB943600059C79B /* Supporting Files */,
 			);
-			path = "Kinja Top Posts";
+			path = "Kinja-Top-Posts";
 			sourceTree = "<group>";
 		};
 		91E4CBF61BB943600059C79B /* Supporting Files */ = {
@@ -190,22 +190,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		91E4CC121BB943600059C79B /* Kinja Top PostsTests */ = {
+		91E4CC121BB943600059C79B /* Kinja-Top-PostsTests */ = {
 			isa = PBXGroup;
 			children = (
 				91E4CC131BB943600059C79B /* Kinja_Top_PostsTests.m */,
 				91E4CC151BB943600059C79B /* Info.plist */,
 			);
-			path = "Kinja Top PostsTests";
+			path = "Kinja-Top-PostsTests";
 			sourceTree = "<group>";
 		};
-		91E4CC1D1BB943600059C79B /* Kinja Top PostsUITests */ = {
+		91E4CC1D1BB943600059C79B /* Kinja-Top-PostsUITests */ = {
 			isa = PBXGroup;
 			children = (
 				91E4CC1E1BB943600059C79B /* Kinja_Top_PostsUITests.m */,
 				91E4CC201BB943600059C79B /* Info.plist */,
 			);
-			path = "Kinja Top PostsUITests";
+			path = "Kinja-Top-PostsUITests";
 			sourceTree = "<group>";
 		};
 		91E4CC2E1BB94D820059C79B /* Fonts */ = {
@@ -290,27 +290,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		91E4CBF21BB943600059C79B /* Kinja Top Posts */ = {
+		91E4CBF21BB943600059C79B /* Kinja-Top-Posts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja Top Posts" */;
+			buildConfigurationList = 91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-Posts" */;
 			buildPhases = (
 				91E4CBEF1BB943600059C79B /* Sources */,
 				91E4CBF01BB943600059C79B /* Frameworks */,
 				91E4CBF11BB943600059C79B /* Resources */,
-				91F68BC41BBAE02200C2669B /* ShellScript */,
+				91FE50861BBBFDF8007FEC23 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Kinja Top Posts";
-			productName = "Kinja Top Posts";
-			productReference = 91E4CBF31BB943600059C79B /* Kinja Top Posts.app */;
+			name = "Kinja-Top-Posts";
+			productName = "Kinja-Top-Posts";
+			productReference = 91E4CBF31BB943600059C79B /* Kinja-Top-Posts.app */;
 			productType = "com.apple.product-type.application";
 		};
-		91E4CC0E1BB943600059C79B /* Kinja Top PostsTests */ = {
+		91E4CC0E1BB943600059C79B /* Kinja-Top-PostsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91E4CC261BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja Top PostsTests" */;
+			buildConfigurationList = 91E4CC261BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-PostsTests" */;
 			buildPhases = (
 				91E4CC0B1BB943600059C79B /* Sources */,
 				91E4CC0C1BB943600059C79B /* Frameworks */,
@@ -321,14 +321,14 @@
 			dependencies = (
 				91E4CC111BB943600059C79B /* PBXTargetDependency */,
 			);
-			name = "Kinja Top PostsTests";
-			productName = "Kinja Top PostsTests";
-			productReference = 91E4CC0F1BB943600059C79B /* Kinja Top PostsTests.xctest */;
+			name = "Kinja-Top-PostsTests";
+			productName = "Kinja-Top-PostsTests";
+			productReference = 91E4CC0F1BB943600059C79B /* Kinja-Top-Posts.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		91E4CC191BB943600059C79B /* Kinja Top PostsUITests */ = {
+		91E4CC191BB943600059C79B /* Kinja-Top-PostsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91E4CC291BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja Top PostsUITests" */;
+			buildConfigurationList = 91E4CC291BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-PostsUITests" */;
 			buildPhases = (
 				91E4CC161BB943600059C79B /* Sources */,
 				91E4CC171BB943600059C79B /* Frameworks */,
@@ -339,9 +339,9 @@
 			dependencies = (
 				91E4CC1C1BB943600059C79B /* PBXTargetDependency */,
 			);
-			name = "Kinja Top PostsUITests";
-			productName = "Kinja Top PostsUITests";
-			productReference = 91E4CC1A1BB943600059C79B /* Kinja Top PostsUITests.xctest */;
+			name = "Kinja-Top-PostsUITests";
+			productName = "Kinja-Top-PostsUITests";
+			productReference = 91E4CC1A1BB943600059C79B /* Kinja-Top-Posts.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -367,7 +367,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 91E4CBEE1BB943600059C79B /* Build configuration list for PBXProject "Kinja Top Posts" */;
+			buildConfigurationList = 91E4CBEE1BB943600059C79B /* Build configuration list for PBXProject "Kinja-Top-Posts" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -380,9 +380,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				91E4CBF21BB943600059C79B /* Kinja Top Posts */,
-				91E4CC0E1BB943600059C79B /* Kinja Top PostsTests */,
-				91E4CC191BB943600059C79B /* Kinja Top PostsUITests */,
+				91E4CBF21BB943600059C79B /* Kinja-Top-Posts */,
+				91E4CC0E1BB943600059C79B /* Kinja-Top-PostsTests */,
+				91E4CC191BB943600059C79B /* Kinja-Top-PostsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -421,7 +421,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		91F68BC41BBAE02200C2669B /* ShellScript */ = {
+		91FE50861BBBFDF8007FEC23 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,7 +432,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 9b38b6e56d84829837bdff51c371d600d898a524 1f6c421afbb74c7840116c243c406baf09e1428131172e0b4b4e5734ac492dd5";
+			shellScript = "./Fabric.framework/run 9b38b6e56d84829837bdff51c371d600d898a524 1f6c421afbb74c7840116c243c406baf09e1428131172e0b4b4e5734ac492dd5\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -483,12 +483,12 @@
 /* Begin PBXTargetDependency section */
 		91E4CC111BB943600059C79B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91E4CBF21BB943600059C79B /* Kinja Top Posts */;
+			target = 91E4CBF21BB943600059C79B /* Kinja-Top-Posts */;
 			targetProxy = 91E4CC101BB943600059C79B /* PBXContainerItemProxy */;
 		};
 		91E4CC1C1BB943600059C79B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91E4CBF21BB943600059C79B /* Kinja Top Posts */;
+			target = 91E4CBF21BB943600059C79B /* Kinja-Top-Posts */;
 			targetProxy = 91E4CC1B1BB943600059C79B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -602,14 +602,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Kinja",
-					Top,
-					Posts,
+					"$(PROJECT_DIR)/Kinja-Top-Posts",
 				);
-				INFOPLIST_FILE = "Kinja Top Posts/Info.plist";
+				INFOPLIST_FILE = "Kinja-Top-Posts/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.athomas.KinjaTopPosts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Kinja-Top-Posts";
 			};
 			name = Debug;
 		};
@@ -620,14 +618,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Kinja",
-					Top,
-					Posts,
+					"$(PROJECT_DIR)/Kinja-Top-Posts",
 				);
-				INFOPLIST_FILE = "Kinja Top Posts/Info.plist";
+				INFOPLIST_FILE = "Kinja-Top-Posts/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.athomas.KinjaTopPosts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Kinja-Top-Posts";
 			};
 			name = Release;
 		};
@@ -635,11 +631,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Kinja Top PostsTests/Info.plist";
+				INFOPLIST_FILE = "Kinja-Top-PostsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.athomas.Kinja-Top-PostsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kinja Top Posts.app/Kinja Top Posts";
+				PRODUCT_NAME = "Kinja-Top-Posts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kinja-Top-Posts.app/Kinja-Top-Posts";
 			};
 			name = Debug;
 		};
@@ -647,22 +643,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Kinja Top PostsTests/Info.plist";
+				INFOPLIST_FILE = "Kinja-Top-PostsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.athomas.Kinja-Top-PostsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kinja Top Posts.app/Kinja Top Posts";
+				PRODUCT_NAME = "Kinja-Top-Posts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kinja-Top-Posts.app/Kinja-Top-Posts";
 			};
 			name = Release;
 		};
 		91E4CC2A1BB943600059C79B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Kinja Top PostsUITests/Info.plist";
+				INFOPLIST_FILE = "Kinja-Top-PostsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.athomas.Kinja-Top-PostsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Kinja Top Posts";
+				PRODUCT_NAME = "Kinja-Top-Posts";
+				TEST_TARGET_NAME = "Kinja-Top-Posts";
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
@@ -670,11 +666,11 @@
 		91E4CC2B1BB943600059C79B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Kinja Top PostsUITests/Info.plist";
+				INFOPLIST_FILE = "Kinja-Top-PostsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.athomas.Kinja-Top-PostsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Kinja Top Posts";
+				PRODUCT_NAME = "Kinja-Top-Posts";
+				TEST_TARGET_NAME = "Kinja-Top-Posts";
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;
@@ -682,7 +678,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91E4CBEE1BB943600059C79B /* Build configuration list for PBXProject "Kinja Top Posts" */ = {
+		91E4CBEE1BB943600059C79B /* Build configuration list for PBXProject "Kinja-Top-Posts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91E4CC211BB943600059C79B /* Debug */,
@@ -691,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja Top Posts" */ = {
+		91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-Posts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91E4CC241BB943600059C79B /* Debug */,
@@ -700,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91E4CC261BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja Top PostsTests" */ = {
+		91E4CC261BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-PostsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91E4CC271BB943600059C79B /* Debug */,
@@ -709,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91E4CC291BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja Top PostsUITests" */ = {
+		91E4CC291BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-PostsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91E4CC2A1BB943600059C79B /* Debug */,

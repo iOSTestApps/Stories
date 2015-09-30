@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91E4CBF21BB943600059C79B"
-               BuildableName = "Kinja Top Posts.app"
-               BlueprintName = "Kinja Top Posts"
-               ReferencedContainer = "container:Kinja Top Posts.xcodeproj">
+               BuildableName = "Kinja-Top-Posts.app"
+               BlueprintName = "Kinja-Top-Posts"
+               ReferencedContainer = "container:Kinja-Top-Posts.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91E4CC0E1BB943600059C79B"
-               BuildableName = "Kinja Top PostsTests.xctest"
-               BlueprintName = "Kinja Top PostsTests"
-               ReferencedContainer = "container:Kinja Top Posts.xcodeproj">
+               BuildableName = "Kinja-Top-Posts.xctest"
+               BlueprintName = "Kinja-Top-PostsTests"
+               ReferencedContainer = "container:Kinja-Top-Posts.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91E4CC191BB943600059C79B"
-               BuildableName = "Kinja Top PostsUITests.xctest"
-               BlueprintName = "Kinja Top PostsUITests"
-               ReferencedContainer = "container:Kinja Top Posts.xcodeproj">
+               BuildableName = "Kinja-Top-Posts.xctest"
+               BlueprintName = "Kinja-Top-PostsUITests"
+               ReferencedContainer = "container:Kinja-Top-Posts.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91E4CBF21BB943600059C79B"
-            BuildableName = "Kinja Top Posts.app"
-            BlueprintName = "Kinja Top Posts"
-            ReferencedContainer = "container:Kinja Top Posts.xcodeproj">
+            BuildableName = "Kinja-Top-Posts.app"
+            BlueprintName = "Kinja-Top-Posts"
+            ReferencedContainer = "container:Kinja-Top-Posts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91E4CBF21BB943600059C79B"
-            BuildableName = "Kinja Top Posts.app"
-            BlueprintName = "Kinja Top Posts"
-            ReferencedContainer = "container:Kinja Top Posts.xcodeproj">
+            BuildableName = "Kinja-Top-Posts.app"
+            BlueprintName = "Kinja-Top-Posts"
+            ReferencedContainer = "container:Kinja-Top-Posts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91E4CBF21BB943600059C79B"
-            BuildableName = "Kinja Top Posts.app"
-            BlueprintName = "Kinja Top Posts"
-            ReferencedContainer = "container:Kinja Top Posts.xcodeproj">
+            BuildableName = "Kinja-Top-Posts.app"
+            BlueprintName = "Kinja-Top-Posts"
+            ReferencedContainer = "container:Kinja-Top-Posts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

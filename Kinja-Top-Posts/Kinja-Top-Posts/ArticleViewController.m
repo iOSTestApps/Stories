@@ -34,7 +34,7 @@
                     a:visited{ color: #35509A; } \
                     a:hover{ color: #35509A; } \
                     a:active { color: #35509A; } \
-                    blockquote {background: #f9f9f9;border-left: 10px solid #ccc;margin: 1.5em 5px;padding: 0.5em 10px;} \
+                    blockquote {background: #f9f9f9;border-left: 10px solid #ccc;margin: 1.5em 5px;padding: 0.5em 10px; font-size: 90%;} \
                     blockquote p { display: inline;} \
         </style>";
     NSString *html = [NSString stringWithFormat:@"<html>%@<body><h1>%@</h1><h3>%@ • %@</h3>%@<body></html>", cssStyle, self.post.postHeadline, self.post.authorName, [self getDateAsEnglish], display];
