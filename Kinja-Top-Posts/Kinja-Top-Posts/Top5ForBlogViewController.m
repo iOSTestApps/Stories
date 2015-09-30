@@ -155,7 +155,7 @@
 {
     NSNumber *blogID= [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentBlog];
     if(blogID == nil)
-        blogID = @(7);
+        blogID = @(4); // Default blog is going to be gizmodo
     
     self.blog = [[DataManager sharedInstance] getBlogWithID:blogID];
     if(self.blog == nil)
