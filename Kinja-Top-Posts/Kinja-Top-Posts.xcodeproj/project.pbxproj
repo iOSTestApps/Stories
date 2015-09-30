@@ -163,18 +163,14 @@
 		91E4CBF51BB943600059C79B /* Kinja-Top-Posts */ = {
 			isa = PBXGroup;
 			children = (
-				91F68BC51BBAE04B00C2669B /* Fabric.framework */,
-				91F68BC61BBAE04B00C2669B /* Crashlytics.framework */,
+				91FE509C1BBC0F7A007FEC23 /* Libs */,
+				91FE509D1BBC0F85007FEC23 /* Assets */,
 				91F68BB71BBAB96E00C2669B /* Categories */,
-				91ECA2381BBA594B0033E44D /* Manager */,
 				91E4CC421BB96BE40059C79B /* Controllers */,
 				91E4CC411BB96BDB0059C79B /* Data */,
-				91E4CC3B1BB961EF0059C79B /* ARSafariActivity */,
-				91E4CC2E1BB94D820059C79B /* Fonts */,
 				91E4CBF91BB943600059C79B /* AppDelegate.h */,
 				91E4CBFA1BB943600059C79B /* AppDelegate.m */,
 				91E4CBFF1BB943600059C79B /* Main.storyboard */,
-				91E4CC051BB943600059C79B /* Assets.xcassets */,
 				91E4CC071BB943600059C79B /* LaunchScreen.storyboard */,
 				91E4CBF61BB943600059C79B /* Supporting Files */,
 			);
@@ -232,6 +228,8 @@
 		91E4CC411BB96BDB0059C79B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				91ECA2391BBA595E0033E44D /* DataManager.h */,
+				91ECA23A1BBA595E0033E44D /* DataManager.m */,
 				91ECA2261BB9C6B80033E44D /* Image+CoreDataProperties.h */,
 				91ECA2271BB9C6B80033E44D /* Image+CoreDataProperties.m */,
 				91ECA2281BB9C6B80033E44D /* Image.h */,
@@ -265,15 +263,6 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		91ECA2381BBA594B0033E44D /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				91ECA2391BBA595E0033E44D /* DataManager.h */,
-				91ECA23A1BBA595E0033E44D /* DataManager.m */,
-			);
-			name = Manager;
-			sourceTree = "<group>";
-		};
 		91F68BB71BBAB96E00C2669B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +274,25 @@
 				91F68BC21BBABC6A00C2669B /* NSDictionary+Utilities.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		91FE509C1BBC0F7A007FEC23 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				91E4CC3B1BB961EF0059C79B /* ARSafariActivity */,
+				91F68BC51BBAE04B00C2669B /* Fabric.framework */,
+				91F68BC61BBAE04B00C2669B /* Crashlytics.framework */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		91FE509D1BBC0F85007FEC23 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				91E4CC2E1BB94D820059C79B /* Fonts */,
+				91E4CC051BB943600059C79B /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
