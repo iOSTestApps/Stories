@@ -230,7 +230,6 @@
 
 - (void)fetchPostsForBlog:(Blog *)blog
 {
-    
     static NSString *topPostBase = @"http://kinja.com/api/chartbeat/toppostsextended?host=%@&limit=5";
     NSString *topPostForHost = [NSString stringWithFormat:topPostBase, blog.blogHost];
     NSURL *topPostUrl = [[NSURL alloc] initWithString:topPostForHost];
