@@ -29,14 +29,11 @@
 {
     [super viewDidLoad];
     
-    NSArray *buttons = @[self.deadspinButton, self.gawkerButton, self.gizmodoButton, self.io9Button, self.jalponikButton, self.jezebelButton, self.kotakuButton, self.lifehackerButton];
     
-//    self.deadspinTopConstraint.constant = 500;
-//    self.lifehackerBottomConstraint.constant = -500;
-    for(UIButton *button in buttons) {
-        button.hidden = NO;
-//        button.alpha = 0;
-    }
+    
+    
+    
+    
 //    
 //    [UIView animateWithDuration:2 delay:02 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:0 animations:^{
 //        self.deadspinTopConstraint.constant = 100;
@@ -49,6 +46,29 @@
 //    } completion:^(BOOL finished) {
 //        
 //    }];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    /*NSArray *buttons = @[self.deadspinButton, self.gawkerButton, self.gizmodoButton, self.io9Button, self.jalponikButton, self.jezebelButton, self.kotakuButton, self.lifehackerButton];
+    
+    static NSTimeInterval duration = 0.2;
+    NSTimeInterval delay = 0.0;
+    for(UIButton *button in buttons) {
+        button.hidden = NO;
+        button.alpha = 0;
+        
+        [UIView animateKeyframesWithDuration:duration delay:delay options:0 animations:^{
+            button.alpha = 1;
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+        delay += 0.05;
+    }*/
+
 }
 
 - (BOOL)prefersStatusBarHidden
