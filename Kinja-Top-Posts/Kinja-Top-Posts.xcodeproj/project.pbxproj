@@ -298,9 +298,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		91E4CBF21BB943600059C79B /* Kinja-Top-Posts */ = {
+		91E4CBF21BB943600059C79B /* Stories */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-Posts" */;
+			buildConfigurationList = 91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Stories" */;
 			buildPhases = (
 				91E4CBEF1BB943600059C79B /* Sources */,
 				91E4CBF01BB943600059C79B /* Frameworks */,
@@ -311,7 +311,7 @@
 			);
 			dependencies = (
 			);
-			name = "Kinja-Top-Posts";
+			name = Stories;
 			productName = "Kinja-Top-Posts";
 			productReference = 91E4CBF31BB943600059C79B /* Kinja-Top-Posts.app */;
 			productType = "com.apple.product-type.application";
@@ -388,7 +388,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				91E4CBF21BB943600059C79B /* Kinja-Top-Posts */,
+				91E4CBF21BB943600059C79B /* Stories */,
 				91E4CC0E1BB943600059C79B /* Kinja-Top-PostsTests */,
 				91E4CC191BB943600059C79B /* Kinja-Top-PostsUITests */,
 			);
@@ -491,12 +491,12 @@
 /* Begin PBXTargetDependency section */
 		91E4CC111BB943600059C79B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91E4CBF21BB943600059C79B /* Kinja-Top-Posts */;
+			target = 91E4CBF21BB943600059C79B /* Stories */;
 			targetProxy = 91E4CC101BB943600059C79B /* PBXContainerItemProxy */;
 		};
 		91E4CC1C1BB943600059C79B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91E4CBF21BB943600059C79B /* Kinja-Top-Posts */;
+			target = 91E4CBF21BB943600059C79B /* Stories */;
 			targetProxy = 91E4CC1B1BB943600059C79B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -695,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Kinja-Top-Posts" */ = {
+		91E4CC231BB943600059C79B /* Build configuration list for PBXNativeTarget "Stories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91E4CC241BB943600059C79B /* Debug */,
