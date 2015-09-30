@@ -106,7 +106,7 @@
 - (void)createDefaultGMGBlogs
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    if([prefs boolForKey:kAreBlogsAlreadyStored])
+    if([prefs objectForKey:kAreBlogsAlreadyStored] != nil)
         return;
     
     Blog *blogDeadspin = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
@@ -153,7 +153,7 @@
     BOOL success = [self.insertionContext save:&saveError];
     
     if(success) {
-        [prefs setBool:YES forKey:kAreBlogsAlreadyStored];
+        [prefs setObject:[NSDate date] forKey:kAreBlogsAlreadyStored];
         [prefs synchronize];
     }
 }

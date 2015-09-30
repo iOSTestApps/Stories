@@ -43,7 +43,6 @@
     [self fetch];
     
     [self initPageControl];
-    
 }
 
 - (void)initPageControl
