@@ -141,8 +141,6 @@
 
 - (void)blogHasBeenSelected:(NSNumber *)blogID
 {
-    
-    
     NSNumber *currentBlogID = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentBlog];
     if(currentBlogID != nil && [blogID isEqualToNumber:currentBlogID]) // we selected the same, do nothing
         return;

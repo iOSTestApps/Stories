@@ -135,4 +135,23 @@
     return filePath;
 }
 
+//http://stackoverflow.com/questions/7938650/ios-detect-3g-or-wifi
+//Reachability *reachability = [Reachability reachabilityForInternetConnection];
+//[reachability startNotifier];
+//
+//NetworkStatus status = [reachability currentReachabilityStatus];
+//
+//if(status == NotReachable)
+//{
+//    //No internet
+//}
+//else if (status == ReachableViaWiFi)
+//{
+//    //WiFi
+//}
+//else if (status == ReachableViaWWAN)
+//{
+//    //3G
+//}
+
 @end
