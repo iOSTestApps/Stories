@@ -104,8 +104,12 @@
         
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:self delegateQueue:[NSOperationQueue mainQueue]];
         
-        NSString *imageURL = [NSString stringWithFormat:@"https://i.kinja-img.com/gawker-media/image/upload/%@.jpg", self.post.image.imageID];
-        NSURL *url = [NSURL URLWithString: imageURL];
+        //NSString *imageURL2 = [NSString stringWithFormat:@"https://i.kinja-img.com/gawker-media/image/upload/%@.jpg", self.post.image.imageID];
+        
+        
+        NSURL *url = [NSURL URLWithString: [self.post.image.imageURL stringByReplacingOccurrencesOfString:@".gif" withString:@".jpg" ] ];
+        
+        NSLog(@"image URL : %@", url);
 
         NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL: url];
         
