@@ -77,7 +77,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHK-XA-bRD" userLabel="Border Top">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="LEQ-yT-2NV"/>
                                         </constraints>
