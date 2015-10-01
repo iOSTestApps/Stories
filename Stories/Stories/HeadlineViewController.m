@@ -93,6 +93,9 @@
 
 - (void)loadImage
 {
+    if(self.post.image.imageID == nil)
+        return;
+    
     if(![self loadImageFromCache]) {
         
         self.progressBar.hidden = NO;

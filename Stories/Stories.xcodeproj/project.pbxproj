@@ -615,7 +615,7 @@
 				INFOPLIST_FILE = Stories/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.athomas.KinjaTopPosts;
+				PRODUCT_BUNDLE_IDENTIFIER = me.athomas.Stories;
 				PRODUCT_NAME = Stories;
 			};
 			name = Debug;
@@ -632,7 +632,7 @@
 				INFOPLIST_FILE = Stories/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.athomas.KinjaTopPosts;
+				PRODUCT_BUNDLE_IDENTIFIER = me.athomas.Stories;
 				PRODUCT_NAME = Stories;
 			};
 			name = Release;
