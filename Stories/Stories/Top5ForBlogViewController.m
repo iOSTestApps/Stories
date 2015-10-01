@@ -37,12 +37,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postDownloaded:) name:kTopPostsFetched object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkConnectionLost) name:kAPINetworkConnectionError object:nil];
     
-    [self refreshContent];
-    
+    [self loadBlog];
     self.fetchedResultsController = [self getFetchedResultsController];
     [self fetch];
-    
+    [self updateBlogButton];
     [self initPageControl];
+    [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
 }
 
 - (void)initPageControl
@@ -141,32 +141,20 @@
 
 - (void)blogHasBeenSelected:(NSNumber *)blogID
 {
-    NSNumber *currentBlogID= [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentBlog];
+    
+    
+    NSNumber *currentBlogID = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentBlog];
     if(currentBlogID != nil && [blogID isEqualToNumber:currentBlogID]) // we selected the same, do nothing
         return;
     
-    [[NSUserDefaults standardUserDefaults] setObject:blogID forKey:kCurrentBlog];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self saveBlog:blogID];
     
-    [self refreshContent];
-}
-
-- (void)refreshContent
-{
-    NSNumber *blogID= [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentBlog];
-    if(blogID == nil)
-        blogID = @(4); // Default blog is going to be gizmodo
-    
-    self.blog = [[DataManager sharedInstance] getBlogWithID:blogID];
-    if(self.blog == nil)
-        return;
-    
+    [self loadBlog];
     self.fetchedResultsController = [self getFetchedResultsController];
+    [self fetch];
+    [self updateBlogButton];
     
     [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
-    [self.blogNameButton setTitle:[self.blog.blogDisplayName uppercaseString] forState:UIControlStateNormal];
-    
-    //[self postDownloaded:nil];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
@@ -249,5 +237,24 @@
     // Something to do at some point
 }
 
+- (void)saveBlog:(NSNumber *)blogID
+{
+    [[NSUserDefaults standardUserDefaults] setObject:blogID forKey:kCurrentBlog];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)loadBlog
+{
+    NSNumber *blogID = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentBlog];
+    if(blogID == nil)
+        blogID = @(4); // Default blog is going to be gizmodo
+    
+    self.blog = [[DataManager sharedInstance] getBlogWithID:blogID];
+}
+
+- (void)updateBlogButton
+{
+    [self.blogNameButton setTitle:[self.blog.blogDisplayName uppercaseString] forState:UIControlStateNormal];
+}
 
 @end
