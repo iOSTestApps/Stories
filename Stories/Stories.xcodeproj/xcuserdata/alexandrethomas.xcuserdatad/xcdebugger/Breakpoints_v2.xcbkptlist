@@ -418,12 +418,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stories/Top5ForBlogViewController.m"
-            timestampString = "465403768.34811"
+            timestampString = "465549656.008967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stories/Top5ForBlogViewController.m"
+            timestampString = "465549634.797225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "-fetchFromAPI:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) Blog *blog;
 @property (strong, nonatomic) HeadlineViewController *currentVC;
+@property (strong, nonatomic) NSDate *lastFetchDate;
 
 @end
 
@@ -39,10 +40,16 @@
     
     [self loadBlog];
     self.fetchedResultsController = [self getFetchedResultsController];
-    [self fetch];
+    [self fetchFromDB];
     [self updateBlogButton];
     [self initPageControl];
-    [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
+    [self fetchFromAPI:YES];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self fetchFromAPI:NO];
 }
 
 - (void)initPageControl
@@ -149,10 +156,9 @@
     
     [self loadBlog];
     self.fetchedResultsController = [self getFetchedResultsController];
-    [self fetch];
+    [self fetchFromDB];
     [self updateBlogButton];
-    
-    [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
+    [self fetchFromAPI:YES];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
@@ -204,16 +210,30 @@
     return controller;
 }
 
-- (void)fetch
+- (void)fetchFromDB
 {
     NSError *error = nil;
     [[self fetchedResultsController] performFetch:&error];
 }
 
+- (void)fetchFromAPI:(BOOL)force
+{
+    if(!force) {
+        NSDate *currentDate = [NSDate date];
+        NSTimeInterval interval = [currentDate timeIntervalSinceDate:self.lastFetchDate];
+        int numberOFMInutes =  interval / 60;
+        if(numberOFMInutes < 10) // fetch more thatn 10 minutes ago, dont refresh
+            return;
+    }
+    
+    [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
+    self.lastFetchDate = [NSDate date];
+}
+
 - (void)postDownloaded:(NSNotification *)notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self fetch];
+        [self fetchFromDB];
         NSArray *objects = [[self fetchedResultsController] fetchedObjects];
         if(objects != nil && [objects count] > 0) {
             Post *firstPost = objects[0];
