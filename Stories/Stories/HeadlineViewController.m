@@ -104,10 +104,7 @@
         
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:self delegateQueue:[NSOperationQueue mainQueue]];
         
-        //NSString *imageURL2 = [NSString stringWithFormat:@"https://i.kinja-img.com/gawker-media/image/upload/%@.jpg", self.post.image.imageID];
-        
-        
-        NSURL *url = [NSURL URLWithString: [self.post.image.imageURL stringByReplacingOccurrencesOfString:@".gif" withString:@".jpg" ] ];
+        NSURL *url = [NSURL URLWithString: [self getImageURLToDownload]];
         
         NSLog(@"image URL : %@", url);
 
@@ -115,6 +112,15 @@
         
         [dataTask resume];
     }
+}
+
+- (NSString *)getImageURLToDownload
+{
+    NSString *url = self.post.image.imageURL;
+    if([url containsString:@",w_320/"])
+        url = [NSString stringWithFormat:@"https://i.kinja-img.com/gawker-media/image/upload/%@.jpg", self.post.image.imageID];
+    
+    return [url stringByReplacingOccurrencesOfString:@".gif" withString:@".jpg" ];
 }
 
 - (BOOL)loadImageFromCache
