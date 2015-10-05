@@ -7,6 +7,8 @@
 //
 
 #import "ChoseBlogViewController.h"
+#import "GAI.h"
+#import "GAIFields.h"
 
 @interface ChoseBlogViewController ()
 
@@ -31,7 +33,8 @@
     
     
     
-    
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"ChoseBlogViewController"];
     
     
 //    

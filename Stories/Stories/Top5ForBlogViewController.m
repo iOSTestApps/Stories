@@ -12,6 +12,9 @@
 #import "UIViewController+Utilities.h"
 #import "ArticleViewController.h"
 #import "DataManager.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 #define kCurrentBlog @"kCurrentBlog"\
 
@@ -44,6 +47,9 @@
     [self updateBlogButton];
     [self initPageControl];
     [self fetchFromAPI:YES];
+    
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Top5ForBlogViewController"];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -142,7 +148,15 @@
     } else if([segue.identifier isEqualToString:@"showArticle"]) {
         ArticleViewController *vc = (ArticleViewController *)segue.destinationViewController;
         NSArray *objects = [[self fetchedResultsController] fetchedObjects];
-        vc.post = self.pageControl.currentPage < [objects count] ? objects[self.pageControl.currentPage] : nil;
+        Post *post = self.pageControl.currentPage < [objects count] ? objects[self.pageControl.currentPage] : nil;
+        vc.post = post;
+        
+        // Send Google Analytics Event
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Post"     // Event category (required)
+                                                              action:@"ReadArticle"  // Event action (required)
+                                                               label:post.permalink          // Event label
+                                                               value:post.postID] build]];    // Event value
     }
 }
 
@@ -158,6 +172,7 @@
     self.fetchedResultsController = [self getFetchedResultsController];
     [self fetchFromDB];
     [self updateBlogButton];
+    [self openFirstArticle];
     [self fetchFromAPI:YES];
 }
 
@@ -228,6 +243,13 @@
     
     [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
     self.lastFetchDate = [NSDate date];
+    
+    // Send Google Analytics Event
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Blog"     // Event category (required)
+                                                          action:@"FetchContent"  // Event action (required)
+                                                           label:self.blog.blogHost          // Event label
+                                                           value:self.blog.blogID] build]];    // Event value
 }
 
 - (void)postDownloaded:(NSNotification *)notification
@@ -241,13 +263,18 @@
                 return;
         }
         
-        UIViewController *initialViewController = [self viewControllerAtIndex:0];
-        NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
-        [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-        self.toViewIndex = 0;
-        self.pageControl.currentPage = 0;
-        
+        [self openFirstArticle];
     });
+}
+
+- (void)openFirstArticle
+{
+    UIViewController *initialViewController = [self viewControllerAtIndex:0];
+    NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
+    [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+    self.toViewIndex = 0;
+    self.pageControl.currentPage = 0;
+
 }
 
 - (void)networkConnectionLost

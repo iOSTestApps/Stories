@@ -10,7 +10,7 @@
 #import "DataManager.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-
+#import "GAI.h"
 
 @interface AppDelegate ()
 
@@ -29,6 +29,8 @@
     [dataManager createDefaultGMGBlogs];
         
     [Fabric with:@[[Crashlytics class]]];
+    
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-68452533-1"];
 
     return YES;
 }

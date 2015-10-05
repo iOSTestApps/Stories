@@ -8,6 +8,8 @@
 
 #import "ArticleViewController.h"
 #import "ARSafariActivity.h"
+#import "GAI.h"
+#import "GAIFields.h"
 
 @interface ArticleViewController () <UIWebViewDelegate>
 
@@ -40,6 +42,9 @@
     NSString *html = [NSString stringWithFormat:@"<html>%@<body><h1>%@</h1><h3>%@ • %@</h3>%@<body></html>", cssStyle, self.post.postHeadline, self.post.authorName, [self getDateAsEnglish], display];
     
     [self.webView loadHTMLString:html baseURL:nil];
+    
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"ArticleViewController"];
 }
 
 - (NSString *)getDateAsEnglish
