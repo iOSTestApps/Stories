@@ -28,7 +28,6 @@
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) Blog *blog;
 @property (strong, nonatomic) HeadlineViewController *currentVC;
-@property (strong, nonatomic) NSDate *lastFetchDate;
 
 @end
 
@@ -46,16 +45,10 @@
     [self fetchFromDB];
     [self updateBlogButton];
     [self initPageControl];
-    [self fetchFromAPI:YES];
+    [self fetchFromAPI];
     
     id tracker = [[GAI sharedInstance] defaultTracker];
     [tracker set:kGAIScreenName value:@"Top5ForBlogViewController"];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self fetchFromAPI:NO];
 }
 
 - (void)initPageControl
@@ -173,7 +166,7 @@
     [self fetchFromDB];
     [self updateBlogButton];
     [self openFirstArticle];
-    [self fetchFromAPI:YES];
+    [self fetchFromAPI];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
@@ -231,18 +224,9 @@
     [[self fetchedResultsController] performFetch:&error];
 }
 
-- (void)fetchFromAPI:(BOOL)force
+- (void)fetchFromAPI
 {
-    if(!force) {
-        NSDate *currentDate = [NSDate date];
-        NSTimeInterval interval = [currentDate timeIntervalSinceDate:self.lastFetchDate];
-        int numberOFMInutes =  interval / 60;
-        if(numberOFMInutes < 10) // fetch more thatn 10 minutes ago, dont refresh
-            return;
-    }
-    
     [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
-    self.lastFetchDate = [NSDate date];
     
     // Send Google Analytics Event
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
