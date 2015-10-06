@@ -318,7 +318,7 @@
         if (nil != error) {
             [[NSNotificationCenter defaultCenter] postNotificationName:kAPINetworkConnectionError object:nil];
         } else {
-            [self resetPostScore];
+            [self resetPostScoreForBlog:blog];
             NSArray *results = [self parseAndGetArrayFromData:data withResponse:response withError:error];
             NSArray *postsIds = [self createPostsFromResults:results withBlogID:blog.blogID];
             
@@ -407,9 +407,10 @@
     [self saveInsertionContext];
 }
 
-- (void)resetPostScore
+- (void)resetPostScoreForBlog:(Blog *)blog
 {
-    NSArray *posts = [self doFetchRequestForEntityWithName:@"Post" withPredicate:nil withSortDescriptors:nil withBatchSize:nil inManagedObjectContext:self.insertionContext];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"blog = %@", blog];
+    NSArray *posts = [self doFetchRequestForEntityWithName:@"Post" withPredicate:predicate withSortDescriptors:nil withBatchSize:nil inManagedObjectContext:self.insertionContext];
     for(Post *post in posts) {
         post.score = @(0);
     }

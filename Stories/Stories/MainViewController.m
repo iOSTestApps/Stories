@@ -45,6 +45,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.blogsMenuView.hidden = YES;
+    self.blackBackgroundButton.hidden = YES;
+    
     [self initContentView];
     
     id tracker = [[GAI sharedInstance] defaultTracker];
@@ -110,7 +114,6 @@
 - (IBAction)chosenBlogButtonDidPress:(id)sender
 {
     UIButton *button = (UIButton *)sender;
-    NSLog(@"%ld", (long)button.tag);
     [self hideMenu];
     
     Blog *selectedBlog = self.blogs[button.tag];

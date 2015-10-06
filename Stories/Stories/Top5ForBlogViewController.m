@@ -258,7 +258,6 @@
     [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
     self.toViewIndex = 0;
     self.pageControl.currentPage = 0;
-
 }
 
 - (void)networkConnectionLost

@@ -31,7 +31,6 @@
 		91EA537A1BC28209001607BA /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA53791BC28209001607BA /* libGoogleAnalyticsServices.a */; settings = {ASSET_TAGS = (); }; };
 		91EA53801BC282FD001607BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA537F1BC282FD001607BA /* libz.tbd */; };
 		91EA53821BC28304001607BA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA53811BC28304001607BA /* libsqlite3.tbd */; };
-		91EA53841BC3B1BF001607BA /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EA53831BC3B1BF001607BA /* Test.storyboard */; settings = {ASSET_TAGS = (); }; };
 		91EA538A1BC3B2CD001607BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53891BC3B2CD001607BA /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
 		91EA53931BC3B432001607BA /* TopPostsForBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53911BC3B432001607BA /* TopPostsForBlogViewController.m */; settings = {ASSET_TAGS = (); }; };
 		91EA53941BC3B432001607BA /* TopPostsForBlogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91EA53921BC3B432001607BA /* TopPostsForBlogViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -118,7 +117,6 @@
 		91EA53791BC28209001607BA /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		91EA537F1BC282FD001607BA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		91EA53811BC28304001607BA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		91EA53831BC3B1BF001607BA /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		91EA53881BC3B2CD001607BA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		91EA53891BC3B2CD001607BA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		91EA53901BC3B432001607BA /* TopPostsForBlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPostsForBlogViewController.h; sourceTree = "<group>"; };
@@ -219,7 +217,6 @@
 				91E4CBF91BB943600059C79B /* AppDelegate.h */,
 				91E4CBFA1BB943600059C79B /* AppDelegate.m */,
 				91E4CBFF1BB943600059C79B /* Main.storyboard */,
-				91EA53831BC3B1BF001607BA /* Test.storyboard */,
 				91E4CC071BB943600059C79B /* LaunchScreen.storyboard */,
 				91E4CBF61BB943600059C79B /* Supporting Files */,
 			);
@@ -489,7 +486,6 @@
 				91E4CC091BB943600059C79B /* LaunchScreen.storyboard in Resources */,
 				91E4CC331BB94DD40059C79B /* SF-UI-Display-Heavy.otf in Resources */,
 				91E4CC321BB94DD40059C79B /* SF-UI-Display-Bold.otf in Resources */,
-				91EA53841BC3B1BF001607BA /* Test.storyboard in Resources */,
 				91E4CC2D1BB949E20059C79B /* PMN_Caecilia_45_Light.ttf in Resources */,
 				91EA53991BC3B441001607BA /* BlogFamilyViewController.xib in Resources */,
 				91EA539E1BC3D50D001607BA /* ArticleViewController.xib in Resources */,

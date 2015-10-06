@@ -133,7 +133,7 @@
 - (void)fetchPostsFromAPI
 {
     [[DataManager sharedInstance] fetchPostsForBlog:self.blog];
-    
+
     // Send Google Analytics Event
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Blog"     // Event category (required)

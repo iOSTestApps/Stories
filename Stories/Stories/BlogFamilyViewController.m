@@ -118,9 +118,9 @@
         blogID = @(4); // Default blog is going to be gizmodo
     
     self.blogs = [[DataManager sharedInstance] getBlogsAndSubBlogsWithID:blogID];
-    for(Blog *b in self.blogs) {
-        NSLog(@"%@ %@ %@", b.blogDisplayName, b.blogHost, b.blogID);
-    }
+//    for(Blog *b in self.blogs) {
+//        NSLog(@"%@ %@ %@", b.blogDisplayName, b.blogHost, b.blogID);
+//    }
     
     for(int i = 0; i < [self.blogs count]; i++) {
         Blog *blog = self.blogs[i];
