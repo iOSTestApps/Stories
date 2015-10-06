@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Blog.h"
+#import "TopPostsForBlogViewController.h"
 
 #define kCurrentBlog @"kCurrentBlog"
 

@@ -20,6 +20,7 @@
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (strong, nonatomic) HeadlineViewController *currentVC;
 @property (strong, nonatomic) NSArray *posts;
+@property (assign) NSUInteger toViewIndex;
 
 @end
 
@@ -28,12 +29,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initPageControl];
+    
+    self.toViewIndex = 0;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postDownloaded:) name:kTopPostsFetched object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkConnectionLost) name:kAPINetworkConnectionError object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageControlChanged:) name:kPageControlChange object:nil];
     
     [self fetchPostsFromDB];
+    [self initPageControl];
     [self fetchPostsFromAPI];
 }
 
@@ -113,7 +117,8 @@
 {
     if(completed && finished) {
         self.currentVC = (HeadlineViewController *)[pageViewController.viewControllers lastObject];
-        //[self.pageControl setCurrentPage:self.currentVC.view.tag];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kPageIndexChange object:nil userInfo:@{@"pageIndex": [NSNumber numberWithInteger:self.currentVC.view.tag]}];
+        
     }
 }
 
@@ -147,7 +152,7 @@
         [self fetchPostsFromDB];
         if(self.posts != nil && [self.posts count] > 0) {
             Post *firstPost = self.posts[0];
-            if([self.currentVC.post.postID isEqual:firstPost.postID])
+            if([self.currentVC.post.postID isEqualToNumber:firstPost.postID])
                 return;
         }
         
@@ -165,9 +170,29 @@
     UIViewController *initialViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
     [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-//    self.toViewIndex = 0;
-//    self.pageControl.currentPage = 0;
+    self.toViewIndex = 0;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kPageIndexChange object:nil userInfo:@{@"pageIndex": [NSNumber numberWithInteger:self.toViewIndex]}];
     
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
+{
+    for(UIViewController *vc in pendingViewControllers) {
+        self.toViewIndex = vc.view.tag;
+    }
+}
+
+- (void)pageControlChanged:(NSNotification *)notification
+{
+    NSInteger pageIndex = [notification.userInfo[@"pageIndex"] integerValue];
+    
+    UIPageViewControllerNavigationDirection direction = pageIndex > self.toViewIndex ?
+    UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse;
+    UIViewController *initialViewController= [self viewControllerAtIndex:pageIndex];
+    
+    NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
+    [self.pageController setViewControllers:viewControllers direction:direction animated:YES completion:nil];
+    self.toViewIndex = pageIndex;
 }
 
 

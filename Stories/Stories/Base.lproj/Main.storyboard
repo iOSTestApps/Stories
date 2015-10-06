@@ -3,15 +3,23 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SF-UI-Display-Bold.otf">
             <string>SFUIDisplay-Bold</string>
             <string>SFUIDisplay-Bold</string>
             <string>SFUIDisplay-Bold</string>
-            <string>SFUIDisplay-Bold</string>
         </mutableArray>
         <mutableArray key="SF-UI-Display-Semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
             <string>SFUIDisplay-Semibold</string>
             <string>SFUIDisplay-Semibold</string>
             <string>SFUIDisplay-Semibold</string>
@@ -131,82 +139,250 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-wd-3Jl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNW-eq-uxx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button hidden="YES" opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk6-L1-uxy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="backgroundButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="rxa-RT-BzQ"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFQ-0l-3Ww" userLabel="Blog Menu">
+                                <rect key="frame" x="0.0" y="226" width="600" height="324"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e1-HM-PDe">
+                                        <rect key="frame" x="8" y="8" width="584" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ocI-27-VDq"/>
+                                            <constraint firstAttribute="height" constant="44" id="sLi-Tq-5aS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="DEADSPIN">
+                                            <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chosenBlogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="vN0-dw-Ln2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9Q-Gu-Qjw">
+                                        <rect key="frame" x="8" y="52" width="584" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="2sY-2v-5zt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="GAWKER">
+                                            <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chosenBlogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="Fgo-wr-ESU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="888-Tx-dPY">
+                                        <rect key="frame" x="8" y="96" width="584" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Kxo-Ud-Mg6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="GIZMODO">
+                                            <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chosenBlogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="MiA-hs-Omw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIH-rP-eU1">
+                                        <rect key="frame" x="8" y="140" width="584" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vZE-x4-sRZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="iO9">
+                                            <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chosenBlogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="16R-ER-RBr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-o1-Eb5">
+                                        <rect key="frame" x="8" y="184" width="584" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="c9L-9c-aJO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="JALOPNIK">
+                                            <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chosenBlogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="a2l-E2-0j6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c13-Mk-bK1">
+                                        <rect key="frame" x="8" y="228" width="584" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Ozw-DS-JPl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="JEZEBEL">
+                                            <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chosenBlogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="lYA-Eb-SMk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REB-BQ-fcT">
+                                        <rect key="frame" x="8" y="272" width="584" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="fiv-dP-leB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="KOTAKU">
+                                            <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chosenBlogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="Qwn-hr-LMA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="REB-BQ-fcT" secondAttribute="trailing" constant="8" id="4Ht-t0-tZ7"/>
+                                    <constraint firstItem="4e1-HM-PDe" firstAttribute="top" secondItem="FFQ-0l-3Ww" secondAttribute="top" constant="8" id="BQx-49-W19"/>
+                                    <constraint firstItem="c13-Mk-bK1" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Eie-h3-Qie"/>
+                                    <constraint firstItem="4e1-HM-PDe" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Gym-TM-sH7"/>
+                                    <constraint firstItem="z9Q-Gu-Qjw" firstAttribute="top" secondItem="4e1-HM-PDe" secondAttribute="bottom" id="IG7-DI-RMg"/>
+                                    <constraint firstAttribute="bottom" secondItem="REB-BQ-fcT" secondAttribute="bottom" constant="8" id="L48-KQ-ucn"/>
+                                    <constraint firstAttribute="trailing" secondItem="888-Tx-dPY" secondAttribute="trailing" constant="8" id="NCD-dB-ooj"/>
+                                    <constraint firstItem="REB-BQ-fcT" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Udx-Zr-aJ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="eIH-rP-eU1" secondAttribute="trailing" constant="8" id="aRQ-W0-MZ0"/>
+                                    <constraint firstItem="z9Q-Gu-Qjw" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="ctn-FL-ltI"/>
+                                    <constraint firstAttribute="trailing" secondItem="z9Q-Gu-Qjw" secondAttribute="trailing" constant="8" id="g5a-B4-4Jb"/>
+                                    <constraint firstItem="c13-Mk-bK1" firstAttribute="top" secondItem="AIa-o1-Eb5" secondAttribute="bottom" id="gh3-Ho-0I1"/>
+                                    <constraint firstItem="888-Tx-dPY" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="m63-OJ-amf"/>
+                                    <constraint firstItem="AIa-o1-Eb5" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="qP8-bO-WhN"/>
+                                    <constraint firstItem="eIH-rP-eU1" firstAttribute="top" secondItem="888-Tx-dPY" secondAttribute="bottom" id="rCp-EA-3xt"/>
+                                    <constraint firstItem="AIa-o1-Eb5" firstAttribute="top" secondItem="eIH-rP-eU1" secondAttribute="bottom" id="rSw-5i-9fc"/>
+                                    <constraint firstAttribute="trailing" secondItem="c13-Mk-bK1" secondAttribute="trailing" constant="8" id="t0z-G4-x6B"/>
+                                    <constraint firstItem="888-Tx-dPY" firstAttribute="top" secondItem="z9Q-Gu-Qjw" secondAttribute="bottom" id="tkq-uP-2HY"/>
+                                    <constraint firstAttribute="trailing" secondItem="4e1-HM-PDe" secondAttribute="trailing" constant="8" id="ub1-q4-FD9"/>
+                                    <constraint firstItem="eIH-rP-eU1" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="vAh-KD-5lr"/>
+                                    <constraint firstItem="REB-BQ-fcT" firstAttribute="top" secondItem="c13-Mk-bK1" secondAttribute="bottom" id="wNu-Zo-Ya9"/>
+                                    <constraint firstAttribute="trailing" secondItem="AIa-o1-Eb5" secondAttribute="trailing" constant="8" id="xKo-ci-Jih"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-wd-3Jl" userLabel="ToolBar">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwH-6C-O1G" userLabel="Border Top">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="OrC-0h-hDf"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owv-D4-zLa">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owv-D4-zLa">
+                                        <rect key="frame" x="8" y="0.0" width="160" height="50"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="oAQ-Z0-cqV"/>
+                                            <constraint firstAttribute="width" constant="160" id="xFp-bf-VNC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
-                                        <state key="normal" title="DEADSPIN">
-                                            <color key="titleColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="BLOG NAME">
+                                            <color key="titleColor" red="0.7803921568627451" green="0.22352941176470589" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="oAQ-Z0-cqV"/>
-                                            </mask>
-                                        </variation>
                                         <connections>
-                                            <segue destination="0uV-7I-Zht" kind="show" identifier="showBlogList" id="DqN-3b-GRD"/>
+                                            <action selector="blogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="XPo-10-cRr"/>
                                         </connections>
                                     </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gwf-gw-MOC">
+                                        <rect key="frame" x="450" y="6" width="150" height="37"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="c8D-D4-dih"/>
+                                            <constraint firstAttribute="height" constant="37" id="kqb-2t-cfs"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.78039215689999997" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </pageControl>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Owv-D4-zLa" firstAttribute="leading" secondItem="C5q-wd-3Jl" secondAttribute="leading" id="5nl-Zi-UEA"/>
-                                    <constraint firstAttribute="trailing" secondItem="Owv-D4-zLa" secondAttribute="trailing" id="FF5-Yq-H6a"/>
+                                    <constraint firstItem="Owv-D4-zLa" firstAttribute="leading" secondItem="C5q-wd-3Jl" secondAttribute="leading" constant="8" id="5nl-Zi-UEA"/>
                                     <constraint firstAttribute="trailing" secondItem="NwH-6C-O1G" secondAttribute="trailing" id="HaL-jG-sJB"/>
                                     <constraint firstItem="NwH-6C-O1G" firstAttribute="leading" secondItem="C5q-wd-3Jl" secondAttribute="leading" id="PjP-Ua-bhA"/>
                                     <constraint firstAttribute="bottom" secondItem="Owv-D4-zLa" secondAttribute="bottom" id="QP4-Gb-ksM"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="QWs-8z-Qhc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gwf-gw-MOC" secondAttribute="trailing" id="ZJo-73-klt"/>
                                     <constraint firstItem="NwH-6C-O1G" firstAttribute="top" secondItem="C5q-wd-3Jl" secondAttribute="top" id="aqd-YX-eVM"/>
                                     <constraint firstItem="Owv-D4-zLa" firstAttribute="top" secondItem="C5q-wd-3Jl" secondAttribute="top" id="bWa-b9-hZU"/>
+                                    <constraint firstItem="Gwf-gw-MOC" firstAttribute="centerY" secondItem="C5q-wd-3Jl" secondAttribute="centerY" id="uJv-UZ-XOb"/>
                                     <constraint firstAttribute="height" constant="50" id="xuU-5h-cEV"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNW-eq-uxx">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
-                                <subviews>
-                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKh-2Z-LlX">
-                                        <rect key="frame" x="160" y="30" width="75" height="56"/>
-                                        <animations/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="showArticle" id="w5t-KO-Zxs"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C5q-wd-3Jl" secondAttribute="trailing" id="1rL-JC-Q91"/>
                             <constraint firstItem="XNW-eq-uxx" firstAttribute="top" secondItem="EEz-qf-gdK" secondAttribute="top" id="3Ez-b3-Hz4"/>
+                            <constraint firstAttribute="trailing" secondItem="FFQ-0l-3Ww" secondAttribute="trailing" id="4DG-vl-LNE"/>
+                            <constraint firstItem="FFQ-0l-3Ww" firstAttribute="top" secondItem="lk6-L1-uxy" secondAttribute="bottom" id="5NC-MT-0jA"/>
+                            <constraint firstItem="C5q-wd-3Jl" firstAttribute="top" secondItem="lk6-L1-uxy" secondAttribute="bottom" id="ADX-Zi-aOI"/>
                             <constraint firstItem="C5q-wd-3Jl" firstAttribute="top" secondItem="XNW-eq-uxx" secondAttribute="bottom" id="AeX-8N-k1X"/>
+                            <constraint firstItem="FFQ-0l-3Ww" firstAttribute="leading" secondItem="EEz-qf-gdK" secondAttribute="leading" id="C25-bE-V8m"/>
                             <constraint firstItem="pGE-cV-fn6" firstAttribute="top" secondItem="C5q-wd-3Jl" secondAttribute="bottom" id="Dh4-zt-f6b"/>
+                            <constraint firstItem="C5q-wd-3Jl" firstAttribute="top" secondItem="FFQ-0l-3Ww" secondAttribute="bottom" id="E42-zk-JYr"/>
                             <constraint firstAttribute="trailing" secondItem="C5q-wd-3Jl" secondAttribute="trailing" id="Klc-iE-o4W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lk6-L1-uxy" secondAttribute="trailing" constant="-20" id="Z8w-Na-yT5"/>
                             <constraint firstAttribute="trailing" secondItem="XNW-eq-uxx" secondAttribute="trailing" id="dQ2-Hf-l24"/>
                             <constraint firstItem="XNW-eq-uxx" firstAttribute="leading" secondItem="EEz-qf-gdK" secondAttribute="leading" id="l39-TY-OTW"/>
                             <constraint firstItem="C5q-wd-3Jl" firstAttribute="leading" secondItem="EEz-qf-gdK" secondAttribute="leading" id="qbW-UZ-yFx"/>
+                            <constraint firstItem="lk6-L1-uxy" firstAttribute="leading" secondItem="EEz-qf-gdK" secondAttribute="leadingMargin" constant="-20" id="y3K-qh-usK"/>
+                            <constraint firstItem="lk6-L1-uxy" firstAttribute="top" secondItem="WNm-k4-WlW" secondAttribute="bottom" constant="-20" id="yba-5D-EIz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5NC-MT-0jA"/>
+                                <exclude reference="Klc-iE-o4W"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="blogButton" destination="Owv-D4-zLa" id="LGf-Cg-Sou"/>
+                        <outlet property="blackBackgroundButton" destination="lk6-L1-uxy" id="S0B-gi-bXw"/>
+                        <outlet property="blog0Button" destination="4e1-HM-PDe" id="n4i-X4-lTI"/>
+                        <outlet property="blog1Button" destination="z9Q-Gu-Qjw" id="8wW-Qw-CfJ"/>
+                        <outlet property="blog2Button" destination="888-Tx-dPY" id="HQS-2B-SJK"/>
+                        <outlet property="blog3Button" destination="eIH-rP-eU1" id="J6c-KP-05p"/>
+                        <outlet property="blog4Button" destination="AIa-o1-Eb5" id="yTI-nZ-9ej"/>
+                        <outlet property="blog5Button" destination="c13-Mk-bK1" id="nRk-JL-f0b"/>
+                        <outlet property="blog6Button" destination="REB-BQ-fcT" id="dQk-xe-AE0"/>
+                        <outlet property="blogButton" destination="Owv-D4-zLa" id="AWw-xV-qR7"/>
+                        <outlet property="blogsMenuView" destination="FFQ-0l-3Ww" id="PKB-wf-hrk"/>
                         <outlet property="contentView" destination="XNW-eq-uxx" id="njx-T3-C4Q"/>
+                        <outlet property="menuToToolBarConstraint" destination="E42-zk-JYr" id="20S-L2-jjo"/>
+                        <outlet property="pageControl" destination="Gwf-gw-MOC" id="J9h-xd-CD0"/>
+                        <outlet property="pageControlRightConstraint" destination="ZJo-73-klt" id="O7V-x5-lJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgQ-AV-pcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,6 +447,9 @@
                                 <state key="normal" title="DEADSPIN">
                                     <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="138"/>
+                                </variation>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="KE0-Yp-ihw"/>
                                 </connections>
@@ -283,6 +462,9 @@
                                 <state key="normal" title="GAWKER">
                                     <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="135" width="300" height="138"/>
+                                </variation>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="22l-rE-SxD"/>
                                 </connections>
@@ -295,6 +477,9 @@
                                 <state key="normal" title="GIZMODO">
                                     <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="270" width="300" height="138"/>
+                                </variation>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="44U-xT-vyO"/>
                                 </connections>
@@ -307,6 +492,9 @@
                                 <state key="normal" title="iO9">
                                     <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="407" width="300" height="138"/>
+                                </variation>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="Xtg-lE-fvB"/>
                                 </connections>
@@ -319,20 +507,11 @@
                                 <state key="normal" title="JALOPNIK">
                                     <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="300" y="0.0" width="300" height="138"/>
+                                </variation>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="KX3-yi-DUb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-4w-ztJ">
-                                <rect key="frame" x="0.0" y="340" width="600" height="68"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
-                                <state key="normal" title="JEZEBEL">
-                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="NsQ-IX-oAX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zth-UE-MX0">
@@ -343,6 +522,9 @@
                                 <state key="normal" title="KOTAKU">
                                     <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="300" y="271" width="300" height="138"/>
+                                </variation>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="kh3-2g-3r3"/>
                                 </connections>
@@ -355,6 +537,9 @@
                                 <state key="normal" title="LIFEHACKER">
                                     <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="300" y="407" width="300" height="138"/>
+                                </variation>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="tBk-s0-eaC"/>
                                 </connections>
@@ -366,6 +551,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FDW-4q-awc"/>
                                 </constraints>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="67" width="300" height="1"/>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-ux-bAg" userLabel="Border Gawker">
                                 <rect key="frame" x="0.0" y="135" width="600" height="1"/>
@@ -382,6 +570,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="bfa-1T-Wc1"/>
                                 </constraints>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="203" width="300" height="1"/>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-HH-eTk" userLabel="Border io9">
                                 <rect key="frame" x="0.0" y="271" width="600" height="1"/>
@@ -398,6 +589,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="sOB-Oa-6vU"/>
                                 </constraints>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="339" width="300" height="1"/>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAT-VV-nbj" userLabel="Border jezebel">
                                 <rect key="frame" x="0.0" y="407" width="600" height="1"/>
@@ -414,7 +608,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="G7Q-tu-mFb"/>
                                 </constraints>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="475" width="300" height="1"/>
+                                </variation>
                             </view>
+                            <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-4w-ztJ">
+                                <rect key="frame" x="0.0" y="340" width="600" height="68"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
+                                <state key="normal" title="JEZEBEL">
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="300" y="135" width="300" height="138"/>
+                                </variation>
+                                <connections>
+                                    <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="NsQ-IX-oAX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -437,9 +649,11 @@
                             <constraint firstItem="Tuk-ux-bAg" firstAttribute="leading" secondItem="ew5-Eh-h8W" secondAttribute="leading" id="GKU-Zr-xKy"/>
                             <constraint firstItem="ZAT-VV-nbj" firstAttribute="bottom" secondItem="gpd-4w-ztJ" secondAttribute="bottom" id="Hcj-zZ-YF1"/>
                             <constraint firstItem="zth-UE-MX0" firstAttribute="top" secondItem="gpd-4w-ztJ" secondAttribute="bottom" id="ILi-o4-ER1"/>
+                            <constraint firstItem="b1X-e9-Z4m" firstAttribute="leading" secondItem="lly-iN-gYR" secondAttribute="trailing" id="Ikd-Aw-rZo"/>
                             <constraint firstAttribute="trailing" secondItem="kNg-pn-rPP" secondAttribute="trailing" id="LVO-3N-Thz"/>
                             <constraint firstAttribute="trailing" secondItem="zth-UE-MX0" secondAttribute="trailing" id="Lhu-LM-1pf"/>
                             <constraint firstItem="ZAT-VV-nbj" firstAttribute="leading" secondItem="ew5-Eh-h8W" secondAttribute="leading" id="LmU-II-N49"/>
+                            <constraint firstItem="zth-UE-MX0" firstAttribute="leading" secondItem="kNg-pn-rPP" secondAttribute="trailing" id="NZT-hN-s2p"/>
                             <constraint firstItem="xAA-nB-iOF" firstAttribute="height" secondItem="lly-iN-gYR" secondAttribute="height" id="OZX-6q-0Ah"/>
                             <constraint firstItem="kNg-pn-rPP" firstAttribute="top" secondItem="TsL-mm-bn8" secondAttribute="bottom" id="SnB-C1-gxM"/>
                             <constraint firstItem="Gau-2h-JvP" firstAttribute="leading" secondItem="ew5-Eh-h8W" secondAttribute="leading" id="Uqq-ib-AQn"/>
@@ -454,6 +668,8 @@
                             <constraint firstItem="Gau-2h-JvP" firstAttribute="bottom" secondItem="xAA-nB-iOF" secondAttribute="bottom" id="ZYI-kV-DNy"/>
                             <constraint firstItem="fax-kM-QCU" firstAttribute="top" secondItem="b1X-e9-Z4m" secondAttribute="bottom" id="aN4-4V-G9E"/>
                             <constraint firstItem="oMp-hQ-Wr9" firstAttribute="leading" secondItem="ew5-Eh-h8W" secondAttribute="leading" id="bGC-dy-TDL"/>
+                            <constraint firstItem="gpd-4w-ztJ" firstAttribute="leading" secondItem="TsL-mm-bn8" secondAttribute="trailing" id="cpN-D4-Nvo"/>
+                            <constraint firstItem="TWy-Nh-uAh" firstAttribute="leading" secondItem="xAA-nB-iOF" secondAttribute="trailing" id="cxC-Lf-Bml"/>
                             <constraint firstAttribute="trailing" secondItem="lly-iN-gYR" secondAttribute="trailing" id="dhw-I4-GlB"/>
                             <constraint firstItem="xAA-nB-iOF" firstAttribute="height" secondItem="zth-UE-MX0" secondAttribute="height" id="en0-Hl-BtX"/>
                             <constraint firstItem="gpd-4w-ztJ" firstAttribute="leading" secondItem="ew5-Eh-h8W" secondAttribute="leading" id="fNr-FT-uxq"/>
@@ -476,6 +692,22 @@
                             <constraint firstItem="jVM-cW-Qn1" firstAttribute="leading" secondItem="ew5-Eh-h8W" secondAttribute="leading" id="wfc-xd-xCS"/>
                             <constraint firstItem="jVM-cW-Qn1" firstAttribute="bottom" secondItem="kNg-pn-rPP" secondAttribute="bottom" id="wwj-UQ-mHt"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cxC-Lf-Bml"/>
+                                <exclude reference="cpN-D4-Nvo"/>
+                                <exclude reference="NZT-hN-s2p"/>
+                                <exclude reference="Ikd-Aw-rZo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="cxC-Lf-Bml"/>
+                                <include reference="cpN-D4-Nvo"/>
+                                <include reference="NZT-hN-s2p"/>
+                                <include reference="Ikd-Aw-rZo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="594"/>

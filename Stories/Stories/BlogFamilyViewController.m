@@ -8,7 +8,6 @@
 
 #import "BlogFamilyViewController.h"
 #import "UIViewController+Utilities.h"
-#import "TopPostsForBlogViewController.h"
 #import "Blog.h"
 #import "DataManager.h"
 
@@ -98,7 +97,7 @@
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
-    return [self.blogs count];
+    return 1;//[self.blogs count];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *blogDisplayName;
 @property (nullable, nonatomic, retain) NSString *blogHost;
 @property (nullable, nonatomic, retain) NSNumber *blogID;
+@property (nullable, nonatomic, retain) NSString *topic;
 @property (nullable, nonatomic, retain) NSSet<Post *> *posts;
 @property (nullable, nonatomic, retain) NSSet<Blog *> *childrenBlogs;
 @property (nullable, nonatomic, retain) Blog *parentBlog;

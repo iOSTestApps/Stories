@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Blog.h"
 
+#define kPageControlChange @"kPageControlChange"
+#define kPageIndexChange @"kPageIndexChange"
+
 @interface TopPostsForBlogViewController : UIViewController
 
 @property (strong, nonatomic) Blog *blog;

@@ -39,6 +39,7 @@
 		91EA53991BC3B441001607BA /* BlogFamilyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91EA53971BC3B441001607BA /* BlogFamilyViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		91EA539C1BC3B95A001607BA /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA539B1BC3B95A001607BA /* APIClient.m */; settings = {ASSET_TAGS = (); }; };
 		91EA539E1BC3D50D001607BA /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91EA539D1BC3D50D001607BA /* ArticleViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		91EA53A11BC44AA9001607BA /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53A01BC44AA9001607BA /* NSDate+Utilities.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2251BB97ED40033E44D /* UIViewController+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2241BB97ED40033E44D /* UIViewController+Utilities.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2321BB9C6B80033E44D /* Image+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2271BB9C6B80033E44D /* Image+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2331BB9C6B80033E44D /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2291BB9C6B80033E44D /* Image.m */; settings = {ASSET_TAGS = (); }; };
@@ -129,6 +130,8 @@
 		91EA539A1BC3B95A001607BA /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		91EA539B1BC3B95A001607BA /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		91EA539D1BC3D50D001607BA /* ArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
+		91EA539F1BC44AA9001607BA /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		91EA53A01BC44AA9001607BA /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		91ECA2231BB97ED40033E44D /* UIViewController+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utilities.h"; sourceTree = "<group>"; };
 		91ECA2241BB97ED40033E44D /* UIViewController+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utilities.m"; sourceTree = "<group>"; };
 		91ECA2261BB9C6B80033E44D /* Image+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Image+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				91F68BBF1BBABA6F00C2669B /* NSString+Utilities.m */,
 				91F68BC11BBABC6A00C2669B /* NSDictionary+Utilities.h */,
 				91F68BC21BBABC6A00C2669B /* NSDictionary+Utilities.m */,
+				91EA539F1BC44AA9001607BA /* NSDate+Utilities.h */,
+				91EA53A01BC44AA9001607BA /* NSDate+Utilities.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -545,6 +550,7 @@
 				91EA53981BC3B441001607BA /* BlogFamilyViewController.m in Sources */,
 				91EA53931BC3B432001607BA /* TopPostsForBlogViewController.m in Sources */,
 				91ECA2341BB9C6B80033E44D /* Post+CoreDataProperties.m in Sources */,
+				91EA53A11BC44AA9001607BA /* NSDate+Utilities.m in Sources */,
 				91ECA2361BB9C6B80033E44D /* Blog+CoreDataProperties.m in Sources */,
 				914350111BBC752000B6B5E7 /* Stories.xcdatamodeld in Sources */,
 				91F68BC31BBABC6A00C2669B /* NSDictionary+Utilities.m in Sources */,

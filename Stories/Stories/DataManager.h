@@ -27,6 +27,8 @@
 - (Blog *)getBlogWithID:(NSNumber *)blogID;
 - (NSArray *)getBlogsAndSubBlogsWithID:(NSNumber *)blogID;
 - (NSArray *)getPostsForBlog:(Blog *)blog;
+- (NSArray *)getGMGBlogs;
 - (void)fetchPostsForBlog:(Blog *)blog;
+- (void)cleaningPosts;
 
 @end

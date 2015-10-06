@@ -16,6 +16,7 @@
 @dynamic blogDisplayName;
 @dynamic blogHost;
 @dynamic blogID;
+@dynamic topic;
 @dynamic posts;
 @dynamic childrenBlogs;
 @dynamic parentBlog;
