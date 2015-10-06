@@ -33,18 +33,23 @@
 {
     [super viewDidLoad];
     
-    [self addGeastureREcognizer:self.headlineLabel];
-    [self addGeastureREcognizer:self.blackBgView];
-    [self addGeastureREcognizer:self.mainImageView];
+    [self addGeastureRecognizer:self.headlineLabel];
+    [self addGeastureRecognizer:self.blackBgView];
+    [self addGeastureRecognizer:self.mainImageView];
     
     NSString *headline = [[self.post.postHeadline util_unescapeXML] cleanHtmlTags];
     if(headline != nil)
         self.headlineLabel.text = headline;
     
     [self loadImage];
+    
+    /*CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.blackBgView.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5] CGColor], (id)[[UIColor colorWithRed:0 green:0 blue:0 alpha:0.2] CGColor], nil];
+    [self.blackBgView.layer insertSublayer:gradient atIndex:0];*/
 }
 
-- (void)addGeastureREcognizer:(UIView *)view
+- (void)addGeastureRecognizer:(UIView *)view
 {
     // Gesture to handle double tap on the image. Used for zoom in/out
     UITapGestureRecognizer *tapToShow = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToShow:)];
