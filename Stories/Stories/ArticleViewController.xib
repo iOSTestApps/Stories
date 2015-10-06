@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Display-Bold.otf">
+            <string>SFUIDisplay-Bold</string>
+            <string>SFUIDisplay-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="qz1-ca-vy2"/>
+                <outlet property="webView" destination="S74-U3-Gjr" id="Yf1-bt-oeq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-5H-NoZ" userLabel="ToolBar">
+                    <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBA-i4-DIv">
+                            <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="E7f-io-D2F"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
+                            <state key="normal" title="CLOSE">
+                                <color key="titleColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closeDidPress:" destination="-1" eventType="touchUpInside" id="Fjp-Yz-sK1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERW-ta-cWV">
+                            <rect key="frame" x="490" y="0.0" width="110" height="50"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="BlU-Cy-7yz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
+                            <state key="normal" title="SHARE">
+                                <color key="titleColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="shareDidPress:" destination="-1" eventType="touchUpInside" id="ydy-S8-bti"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27R-ut-yeJ" userLabel="Border Top">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                            <animations/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="OuR-an-vAB"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ERW-ta-cWV" secondAttribute="bottom" id="3Kb-xb-I7U"/>
+                        <constraint firstItem="27R-ut-yeJ" firstAttribute="top" secondItem="VL7-5H-NoZ" secondAttribute="top" id="4us-LW-xs6"/>
+                        <constraint firstItem="dBA-i4-DIv" firstAttribute="leading" secondItem="VL7-5H-NoZ" secondAttribute="leading" id="CQz-Jv-Sgh"/>
+                        <constraint firstAttribute="height" constant="50" id="Hcp-Q2-rVt"/>
+                        <constraint firstItem="dBA-i4-DIv" firstAttribute="top" secondItem="VL7-5H-NoZ" secondAttribute="top" id="KmC-In-dmf"/>
+                        <constraint firstItem="ERW-ta-cWV" firstAttribute="top" secondItem="VL7-5H-NoZ" secondAttribute="top" id="SZa-jQ-IAF"/>
+                        <constraint firstAttribute="trailing" secondItem="ERW-ta-cWV" secondAttribute="trailing" id="Wx7-Aq-nxg"/>
+                        <constraint firstItem="27R-ut-yeJ" firstAttribute="leading" secondItem="VL7-5H-NoZ" secondAttribute="leading" id="h1G-Je-kFZ"/>
+                        <constraint firstAttribute="bottom" secondItem="dBA-i4-DIv" secondAttribute="bottom" id="v7r-xd-8Qk"/>
+                        <constraint firstAttribute="trailing" secondItem="27R-ut-yeJ" secondAttribute="trailing" id="vIa-cT-JTb"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S74-U3-Gjr">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="S74-U3-Gjr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Ag-aG-veM"/>
+                <constraint firstAttribute="trailing" secondItem="VL7-5H-NoZ" secondAttribute="trailing" id="NHY-LE-zHQ"/>
+                <constraint firstItem="VL7-5H-NoZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VEi-v6-uBX"/>
+                <constraint firstAttribute="trailing" secondItem="S74-U3-Gjr" secondAttribute="trailing" id="i7i-AJ-PZC"/>
+                <constraint firstAttribute="bottom" secondItem="VL7-5H-NoZ" secondAttribute="bottom" id="kNi-0B-TA4"/>
+                <constraint firstItem="VL7-5H-NoZ" firstAttribute="top" secondItem="S74-U3-Gjr" secondAttribute="bottom" id="qfZ-AK-p9w"/>
+                <constraint firstItem="S74-U3-Gjr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zpw-vC-DkY"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -2,7 +2,7 @@
 //  Post+CoreDataProperties.m
 //  Stories
 //
-//  Created by Alexandre THOMAS on 29/09/15.
+//  Created by Alexandre Thomas on 06/10/15.
 //  Copyright © 2015 athomas. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,11 +15,12 @@
 
 @dynamic authorName;
 @dynamic display;
+@dynamic permalink;
 @dynamic postHeadline;
 @dynamic postID;
 @dynamic publishTime;
 @dynamic score;
-@dynamic permalink;
+@dynamic fetchedDate;
 @dynamic blog;
 @dynamic image;
 

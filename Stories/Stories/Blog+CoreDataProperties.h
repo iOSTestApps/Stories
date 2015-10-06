@@ -2,7 +2,7 @@
 //  Blog+CoreDataProperties.h
 //  Stories
 //
-//  Created by Alexandre THOMAS on 29/09/15.
+//  Created by Alexandre Thomas on 06/10/15.
 //  Copyright © 2015 athomas. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *blogHost;
 @property (nullable, nonatomic, retain) NSNumber *blogID;
 @property (nullable, nonatomic, retain) NSSet<Post *> *posts;
+@property (nullable, nonatomic, retain) NSSet<Blog *> *childrenBlogs;
+@property (nullable, nonatomic, retain) Blog *parentBlog;
 
 @end
 
@@ -28,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removePostsObject:(Post *)value;
 - (void)addPosts:(NSSet<Post *> *)values;
 - (void)removePosts:(NSSet<Post *> *)values;
+
+- (void)addChildrenBlogsObject:(Blog *)value;
+- (void)removeChildrenBlogsObject:(Blog *)value;
+- (void)addChildrenBlogs:(NSSet<Blog *> *)values;
+- (void)removeChildrenBlogs:(NSSet<Blog *> *)values;
 
 @end
 

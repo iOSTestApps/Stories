@@ -8,14 +8,16 @@
 
 #import "DataManager.h"
 #import "NSDictionary+Utilities.h"
+#import "APIClient.h"
 
-#define kAreBlogsAlreadyStored @"kAreBlogsAlreadyStored"
+#define kBlogsFetchedDate @"kBlogsFetchedDate"
 
 @interface DataManager()
-@property (strong, nonatomic) NSURLSession *urlSession;
+
+@property (strong, nonatomic) APIClient *apiClient;
 @property (strong, nonatomic) NSManagedObjectContext *insertionContext;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic) BOOL nextPageAvailable;
+
 @end
 
 @implementation DataManager
@@ -41,8 +43,7 @@
 {
     self = [super init];
     
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    self.urlSession = [NSURLSession sessionWithConfiguration:config];
+    self.apiClient = [[APIClient alloc] init];
     
     return self;
 }
@@ -106,56 +107,83 @@
 - (void)createDefaultGMGBlogs
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    if([prefs objectForKey:kAreBlogsAlreadyStored] != nil)
+    if([prefs objectForKey:kBlogsFetchedDate] != nil)
         return;
     
-    Blog *blogDeadspin = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogDeadspin.blogDisplayName = @"Deadspin";
-    blogDeadspin.blogHost = @"deadspin.com";
-    blogDeadspin.blogID = @(11);
+    Blog *blogDeadspin = [self createBlog:@{@"displayName":@"Deadspin", @"host":@"deadspin.com",@"id":@(11)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"Screengrabber", @"host":@"screengrabber.deadspin.com",  @"id":@(450670265)} withParentBlog:blogDeadspin];
+//    [self createBlog:@{@"displayName":@"Regressing",    @"host":@"regressing.deadspin.com",     @"id":@(1070195507)} withParentBlog:blogDeadspin];
+//    [self createBlog:@{@"displayName":@"The Concourse", @"host":@"theconcourse.deadspin.com",   @"id":@(1545464977)} withParentBlog:blogDeadspin];
+//    [self createBlog:@{@"displayName":@"Screamer",      @"host":@"screamer.deadspin.com",       @"id":@(1578711919)} withParentBlog:blogDeadspin];
+//    [self createBlog:@{@"displayName":@"Adequate Man",  @"host":@"adequateman.deadspin.com",    @"id":@(1634307700)} withParentBlog:blogDeadspin];
     
-    Blog *blogGawker = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogGawker.blogDisplayName = @"Gawker";
-    blogGawker.blogHost = @"gawker.com";
-    blogGawker.blogID = @(7);
+    Blog *blogGawker = [self createBlog:@{@"displayName":@"Gawker", @"host":@"gawker.com",@"id":@(7)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"Valleywag",     @"host":@"valleywag.gawker.com",    @"id":@(474833009)} withParentBlog:blogGawker];
+//    [self createBlog:@{@"displayName":@"Defamer",       @"host":@"defamer.gawker.com",      @"id":@(512288369)} withParentBlog:blogGawker];
+//    [self createBlog:@{@"displayName":@"Morning After", @"host":@"morningafter.gawker.com", @"id":@(1570534851)} withParentBlog:blogGawker];
+//    [self createBlog:@{@"displayName":@"True Stories",  @"host":@"truestories.gawker.com",  @"id":@(1634311826)} withParentBlog:blogGawker];
+//    [self createBlog:@{@"displayName":@"TKTK",          @"host":@"tktk.gawker.com",         @"id":@(1634311851)} withParentBlog:blogGawker];
     
-    Blog *blogGizmodo = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogGizmodo.blogDisplayName = @"Gizmodo";
-    blogGizmodo.blogHost = @"gizmodo.com";
-    blogGizmodo.blogID = @(4);
+    Blog *blogGizmodo = [self createBlog:@{@"displayName":@"Gizmodo", @"host":@"gizmodo.com",@"id":@(4)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"Sploid",            @"host":@"sploid.gizmodo.com",@"id":@(487662860)} withParentBlog:blogGizmodo];
+//    [self createBlog:@{@"displayName":@"Indefinitely Wild", @"host":@"indefinitelywild.gizmodo.com",@"id":@(1580652334)} withParentBlog:blogGizmodo];
+//    [self createBlog:@{@"displayName":@"Field Guide",       @"host":@"fieldguide.gizmodo.com",@"id":@(1570534851)} withParentBlog:blogGizmodo];
+//    [self createBlog:@{@"displayName":@"Toyland",           @"host":@"toyland.gizmodo.com",@"id":@(1624665724)} withParentBlog:blogGizmodo];
+//    [self createBlog:@{@"displayName":@"Paleofuture",       @"host":@"paleofuture.gizmodo.com",@"id":@(510682837)} withParentBlog:blogGizmodo];
     
-    Blog *blogiO9 = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogiO9.blogDisplayName = @"iO9";
-    blogiO9.blogHost = @"io9.com";
-    blogiO9.blogID = @(8);
+    Blog *blogiO9 = [self createBlog:@{@"displayName":@"iO9",   @"host":@"io9.com",             @"id":@(8)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"Earth & Space",         @"host":@"space.io9.com",       @"id":@(10011694)} withParentBlog:blogiO9];
+//    [self createBlog:@{@"displayName":@"Animals",               @"host":@"animals.io9.com",     @"id":@(1537065437)} withParentBlog:blogiO9];
+//    [self createBlog:@{@"displayName":@"Toybox",                @"host":@"toybox.io9.com",      @"id":@(1623827663)} withParentBlog:blogiO9];
+//    [self createBlog:@{@"displayName":@"True Crime",            @"host":@"truecrime.io9.com",   @"id":@(1634183237)} withParentBlog:blogiO9];
     
-    Blog *blogJalopnik = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogJalopnik.blogDisplayName = @"Jalopnik";
-    blogJalopnik.blogHost = @"jalopnik.com";
-    blogJalopnik.blogID = @(12);
+    Blog *blogJalopnik = [self createBlog:@{@"displayName":@"Jalopnik", @"host":@"jalopnik.com",@"id":@(12)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"/DRIVE",        @"host":@"drive.jalopnik.com",          @"id":@(468728290)} withParentBlog:blogJalopnik];
+//    [self createBlog:@{@"displayName":@"Foxtrot Alpha", @"host":@"foxtrotalpha.jalopnik.com",   @"id":@(1527265188)} withParentBlog:blogJalopnik];
+//    [self createBlog:@{@"displayName":@"Buyer's Guide", @"host":@"buyersguide.jalopnik.com",    @"id":@(1634521805)} withParentBlog:blogJalopnik];
+//    [self createBlog:@{@"displayName":@"The Garage",    @"host":@"thegarage.jalopnik.com",      @"id":@(1593200293)} withParentBlog:blogJalopnik];
+//    [self createBlog:@{@"displayName":@"Code 3",        @"host":@"code3.jalopnik.com",          @"id":@(1567547931)} withParentBlog:blogJalopnik];
     
-    Blog *blogJezebel = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogJezebel.blogDisplayName = @"Jezebel";
-    blogJezebel.blogHost = @"jezebel.com";
-    blogJezebel.blogID = @(39);
+    Blog *blogJezebel = [self createBlog:@{@"displayName":@"Jezebel", @"host":@"jezebel.com",@"id":@(39)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"kitchenette",           @"host":@"kitchenette.jezebel.com",         @"id":@(1474956711)} withParentBlog:blogJezebel];
+//    [self createBlog:@{@"displayName":@"Flygirl",               @"host":@"flygirl.jezebel.com",             @"id":@(1508468098)} withParentBlog:blogJezebel];
+//    [self createBlog:@{@"displayName":@"That's What She Said",  @"host":@"thatswhatshesaid.jezebel.com",    @"id":@(1603056322)} withParentBlog:blogJezebel];
+//    [self createBlog:@{@"displayName":@"I Thee Dread",          @"host":@"itheedread.jezebel.com",          @"id":@(1633898259)} withParentBlog:blogJezebel];
+//    [self createBlog:@{@"displayName":@"The Muse",              @"host":@"themuse.jezebel.com",             @"id":@(1633941729)} withParentBlog:blogJezebel];
     
-    Blog *blogKotaku = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogKotaku.blogDisplayName = @"Kotaku";
-    blogKotaku.blogHost = @"kotaku.com";
-    blogKotaku.blogID = @(9);
+    Blog *blogKotaku = [self createBlog:@{@"displayName":@"Kotaku", @"host":@"kotaku.com",@"id":@(9)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"Kotaku Selects",    @"host":@"selects.kotaku.com",          @"id":@(472201676)} withParentBlog:blogKotaku];
+//    [self createBlog:@{@"displayName":@"Cosplay",           @"host":@"cosplay.kotaku.com",          @"id":@(1538697436)} withParentBlog:blogKotaku];
+//    [self createBlog:@{@"displayName":@"TMI",               @"host":@"tmi.kotaku.com",              @"id":@(1549089574)} withParentBlog:blogKotaku];
+//    [self createBlog:@{@"displayName":@"Pocket Monster",    @"host":@"pocketmonster.kotaku.com",    @"id":@(1597207345)} withParentBlog:blogKotaku];
+//    [self createBlog:@{@"displayName":@"The Bests",         @"host":@"thebests.kotaku.com",         @"id":@(1633980057)} withParentBlog:blogKotaku];
     
-    Blog *blogLifehacker = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
-    blogLifehacker.blogDisplayName = @"Lifehacker";
-    blogLifehacker.blogHost = @"lifehacker.com";
-    blogLifehacker.blogID = @(17);
+    Blog *blogLifehacker = [self createBlog:@{@"displayName":@"Lifehacker", @"host":@"lifehacker.com",@"id":@(17)} withParentBlog:nil];
+//    [self createBlog:@{@"displayName":@"Lifehacker After Hours",    @"host":@"afterhours.lifehacker.com",   @"id":@(1502188174)} withParentBlog:blogLifehacker];
+//    [self createBlog:@{@"displayName":@"Two Cents",                 @"host":@"twocents.lifehacker.com",     @"id":@(1535289086)} withParentBlog:blogLifehacker];
+//    [self createBlog:@{@"displayName":@"Vitals",                    @"host":@"vitals.lifehacker.com",       @"id":@(1634294947)} withParentBlog:blogLifehacker];
+//    [self createBlog:@{@"displayName":@"Skillet",                   @"host":@"skillet.lifehacker.com",      @"id":@(1634384901)} withParentBlog:blogLifehacker];
+//    [self createBlog:@{@"displayName":@"Workshop",                  @"host":@"workshop.lifehacker.com",     @"id":@(1613506815)} withParentBlog:blogLifehacker];
     
-    NSError *saveError = nil;
-    BOOL success = [self.insertionContext save:&saveError];
-    
+    BOOL success = [self saveInsertionContext];
     if(success) {
-        [prefs setObject:[NSDate date] forKey:kAreBlogsAlreadyStored];
+        [prefs setObject:[NSDate date] forKey:kBlogsFetchedDate];
         [prefs synchronize];
     }
+}
+
+- (Blog *)createBlog:(NSDictionary *)data withParentBlog:(Blog *)parentBlog
+{
+    Blog *blog = [self getBlogWithID:data[@"id"] inManagedObjectContext:self.insertionContext];
+    if(blog == nil) {
+        blog = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
+        blog.blogDisplayName = data[@"displayName"];
+        blog.blogHost = data[@"host"];
+        blog.blogID = data[@"id"];
+        blog.parentBlog = parentBlog;
+    }
+    
+    return blog;
 }
 
 - (Blog *)getBlogWithID:(NSNumber *)blogID
@@ -171,12 +199,27 @@
     return (0 != result.count) ? result[0] : nil;
 }
 
+- (NSArray *)getBlogsAndSubBlogsWithID:(NSNumber *)blogID
+{
+    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(ANY parentBlog.childrenBlogs.blogID = %@) OR (ANY childrenBlogs.blogID = %@) OR (blogID = %@) OR (parentBlog.blogID = %@)", blogID, blogID, blogID, blogID];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"blogID = %@", blogID];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"blogDisplayName" ascending:YES];
+    return [self doFetchRequestForEntityWithName:@"Blog" withPredicate:predicate withSortDescriptors:@[sortDescriptor] withBatchSize:nil inManagedObjectContext:self.readingContext];
+}
+
 - (Post *)getPostWithID:(NSNumber *)postID inManagedObjectContext:(NSManagedObjectContext *)moc
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"postID = %@", postID];
     NSArray *result = [self doFetchRequestForEntityWithName:@"Post" withPredicate:predicate withSortDescriptors:nil withBatchSize:nil inManagedObjectContext:moc];
     
     return (0 != result.count) ? result[0] : nil;
+}
+
+- (NSArray *)getPostsForBlog:(Blog *)blog
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY blog = %@ AND score > 0", blog];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:YES];
+    return [self doFetchRequestForEntityWithName:@"Post" withPredicate:predicate withSortDescriptors:@[sortDescriptor] withBatchSize:nil inManagedObjectContext:self.readingContext];
 }
 
 #pragma mark - Data request
@@ -228,57 +271,62 @@
     return nil;
 }
 
+- (void)fetchSubBlogForBlog:(Blog *)blog
+{
+    [self.apiClient fetchChildrenBlogsForBlog:blog.blogID completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if(nil != error) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kAPINetworkConnectionError object:nil];
+        } else {
+            NSArray *results = [self parseAndGetArrayFromData:data withResponse:response withError:error];
+            NSMutableArray *blogIds = [[NSMutableArray alloc] init];
+            for(NSDictionary *childBlogData in results) {
+                NSNumber *childBlogID = childBlogData[@"child"];
+                [blogIds addObject:childBlogID];
+            }
+            
+            [self.apiClient fetchBlogsDetailsWithIDs:blogIds completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+                NSArray *results = [self parseAndGetArrayFromData:data withResponse:response withError:error];
+                
+                for(NSDictionary *blogData in results) {
+                    Blog *subBlog = (Blog *)[NSEntityDescription insertNewObjectForEntityForName:@"Blog" inManagedObjectContext:self.insertionContext];
+                    subBlog.blogDisplayName = [blogData valueForKey:@"displayName"];
+                    subBlog.blogHost = [blogData valueForKey:@"canonicalHost"];
+                    subBlog.blogID = [blogData valueForKey:@"id"];
+                    subBlog.parentBlog = blog;
+                }
+                
+                [self saveInsertionContext];
+            }];
+        }
+    }];
+}
+
 - (void)fetchPostsForBlog:(Blog *)blog
 {
-    static NSString *topPostBase = @"http://kinja.com/api/chartbeat/toppostsextended?host=%@&limit=5";
-    NSString *topPostForHost = [NSString stringWithFormat:topPostBase, blog.blogHost];
-    NSURL *topPostUrl = [[NSURL alloc] initWithString:topPostForHost];
-    NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:[NSURLRequest requestWithURL:topPostUrl]
-        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            if (nil != error) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:kAPINetworkConnectionError object:nil];
-            } else {
-                [self resetPostScore];
-                NSArray *results = [self parseAndGetArrayFromData:data withResponse:response withError:error];
-                NSString *postsIds = [self createPostsFromResults:results withBlogID:blog.blogID];
-                
-                static NSString *kinjaPostListBaseURL = @"https://kinja.com/api/core/corepost/getList?%@&include=id,display,aboveHeadline,leftOfHeadline";
-                NSString *topPostList = [NSString stringWithFormat:kinjaPostListBaseURL, postsIds];
-                NSURL *topPostUrl = [[NSURL alloc] initWithString:topPostList];
-                NSLog(@"%@",topPostUrl);
-                NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:[NSURLRequest requestWithURL:topPostUrl]
-                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                    if (nil != error) {
-                        [[NSNotificationCenter defaultCenter] postNotificationName:kAPINetworkConnectionError object:nil];
-                    } else {
-                        NSArray *results = [self parseAndGetArrayFromData:data withResponse:response withError:error];
-                        [self updatePostContent:results];
-                        [[NSNotificationCenter defaultCenter] postNotificationName:kTopPostsFetched object:nil userInfo:nil];
-                    }
-                    
-                }];
-                [dataTask resume];
-            }
-        }];
-    
-    [dataTask resume];
+    NSString *blogHost = blog.parentBlog == nil ? blog.blogHost : blog.parentBlog.blogHost;
+    NSString *blogSection = blog.parentBlog == nil ? nil : blog.blogHost;
+    [self.apiClient fetchTopPostsForBlog:blogHost withSection:blogSection withLimit:5 completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (nil != error) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kAPINetworkConnectionError object:nil];
+        } else {
+            [self resetPostScore];
+            NSArray *results = [self parseAndGetArrayFromData:data withResponse:response withError:error];
+            NSArray *postsIds = [self createPostsFromResults:results withBlogID:blog.blogID];
+            
+            [self.apiClient fetchPostsContent:postsIds completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+                if (nil != error) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:kAPINetworkConnectionError object:nil];
+                } else {
+                    NSArray *results = [self parseAndGetArrayFromData:data withResponse:response withError:error];
+                    [self updatePostContent:results];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:kTopPostsFetched object:nil userInfo:@{@"blogID": blog.blogID}];
+                }
+            }];
+        }
+    }];
 }
 
-- (NSString *)getPostsIDsWithIdsArray:(NSArray *)postIDs
-{
-    NSString *ids = @"";
-    NSMutableArray *paramBuffer = [[NSMutableArray alloc] init];
-    
-    for (NSNumber *postID in postIDs) {
-        [paramBuffer addObject: [NSString stringWithFormat:@"id=%@", [(NSNumber *)postID stringValue]]];
-    }
-    
-    ids = [paramBuffer componentsJoinedByString:@"&"];
-    return ids;
-}
-
-
-- (NSString *)createPostsFromResults:(NSArray *)results withBlogID:(NSNumber *)blogID
+- (NSArray *)createPostsFromResults:(NSArray *)results withBlogID:(NSNumber *)blogID
 {
     Blog *blog = [self getBlogWithID:blogID inManagedObjectContext:self.insertionContext];
     NSMutableArray *posts = [[NSMutableArray alloc] init];
@@ -294,10 +342,9 @@
             NSString *timestamp = [postData valueForKey:@"publishTimeMillis"];
             post.publishTime = [NSDate dateWithTimeIntervalSince1970:(NSTimeInterval)[timestamp floatValue] / 1000.0];
             post.blog = blog;
-            
+            post.fetchedDate = [NSDate date];
         }
-        post.score = postData[@"score"];
-        
+        post.score = postData[@"score"]; 
         [posts addObject:post.postID];
     }
  
@@ -309,10 +356,9 @@
         [self.insertionContext deleteObject:post];
     }
 
-    NSError *saveError = nil;
-    [self.insertionContext save:&saveError];
+    [self saveInsertionContext];
     
-    return [self getPostsIDsWithIdsArray:posts];
+    return posts;
 }
 
 - (void)updatePostContent:(NSArray *)results
@@ -340,8 +386,7 @@
         }
     }
     
-    NSError *saveError = nil;
-    [self.insertionContext save:&saveError];
+    [self saveInsertionContext];
 }
 
 - (void)resetPostScore
@@ -350,6 +395,12 @@
     for(Post *post in posts) {
         post.score = @(0);
     }
+}
+
+- (BOOL)saveInsertionContext
+{
+    NSError *saveError = nil;
+    return [self.insertionContext save:&saveError];
 }
 
 @end

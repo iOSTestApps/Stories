@@ -9,18 +9,10 @@
 #import <UIKit/UIKit.h>
 @class Post;
 
-@protocol HeadlineViewControllerDelegate;
 
 @interface HeadlineViewController : UIViewController
 
 @property (strong, nonatomic) Post *post;
-@property (nonatomic, weak) id<HeadlineViewControllerDelegate> delegate;
 
 @end
 
-@protocol HeadlineViewControllerDelegate <NSObject>
-
-
-- (void)articleHasBeenSelected:(HeadlineViewController *)controller;
-
-@end

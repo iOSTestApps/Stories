@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Automatic">
     <entity name="Blog" representedClassName="Blog" syncable="YES">
         <attribute name="blogDisplayName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="blogHost" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="blogID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="childrenBlogs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Blog" inverseName="parentBlog" inverseEntity="Blog" syncable="YES"/>
+        <relationship name="parentBlog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Blog" inverseName="childrenBlogs" inverseEntity="Blog" syncable="YES"/>
         <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="blog" inverseEntity="Post" syncable="YES"/>
     </entity>
     <entity name="Image" representedClassName="Image" syncable="YES">
@@ -15,6 +17,7 @@
     <entity name="Post" representedClassName="Post" syncable="YES">
         <attribute name="authorName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="display" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fetchedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="permalink" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="postHeadline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="postID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -24,8 +27,8 @@
         <relationship name="image" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Image" inverseName="post" inverseEntity="Image" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Blog" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Blog" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="Image" positionX="-36" positionY="63" width="128" height="105"/>
-        <element name="Post" positionX="-54" positionY="18" width="128" height="180"/>
+        <element name="Post" positionX="-54" positionY="18" width="128" height="195"/>
     </elements>
 </model>

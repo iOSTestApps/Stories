@@ -11,6 +11,10 @@
 #import "Image.h"
 #import "NSString+Utilities.h"
 #import "DataManager.h"
+#import "ArticleViewController.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 @interface HeadlineViewController ()<NSURLSessionDataDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate>
 @property (weak, nonatomic) IBOutlet UIView *blackBgView;
@@ -53,9 +57,16 @@
     if(tap.numberOfTapsRequired > 1)
         return;
     
-    if(self.delegate && [self.delegate respondsToSelector:@selector(articleHasBeenSelected:)]) {
-        [self.delegate articleHasBeenSelected:self];
-    }    
+    ArticleViewController *articleVC = [[ArticleViewController alloc] initWithNibName:@"ArticleViewController" bundle:nil];
+    articleVC.post = self.post;
+    [self presentViewController:articleVC animated:YES completion:nil];
+    
+    // Send Google Analytics Event
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Post"     // Event category (required)
+                                                          action:@"ReadArticle"  // Event action (required)
+                                                           label:self.post.permalink          // Event label
+                                                           value:nil] build]];    // Event value
 }
 
 - (void)imageHasBeenLoaded:(NSData *)imageData
@@ -106,7 +117,7 @@
         
         NSURL *url = [NSURL URLWithString: [self getImageURLToDownload]];
         
-        NSLog(@"image URL : %@", url);
+        //NSLog(@"image URL : %@", url);
 
         NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL: url];
         

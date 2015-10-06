@@ -2,7 +2,7 @@
 //  Blog+CoreDataProperties.m
 //  Stories
 //
-//  Created by Alexandre THOMAS on 29/09/15.
+//  Created by Alexandre Thomas on 06/10/15.
 //  Copyright © 2015 athomas. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,5 +17,7 @@
 @dynamic blogHost;
 @dynamic blogID;
 @dynamic posts;
+@dynamic childrenBlogs;
+@dynamic parentBlog;
 
 @end

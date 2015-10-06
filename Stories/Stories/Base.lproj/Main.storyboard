@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="922" y="889"/>
         </scene>
-        <!--Top5 For Blog View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="VyN-PW-L1D">
             <objects>
-                <viewController id="Ia0-iF-Ybu" customClass="Top5ForBlogViewController" sceneMemberID="viewController">
+                <viewController id="Ia0-iF-Ybu" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WNm-k4-WlW"/>
                         <viewControllerLayoutGuide type="bottom" id="pGE-cV-fn6"/>
@@ -134,20 +134,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-wd-3Jl">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owv-D4-zLa">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="oAQ-Z0-cqV"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
-                                        <state key="normal" title="DEADSPIN">
-                                            <color key="titleColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="0uV-7I-Zht" kind="show" identifier="showBlogList" id="DqN-3b-GRD"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwH-6C-O1G" userLabel="Border Top">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
                                         <animations/>
@@ -156,29 +142,38 @@
                                             <constraint firstAttribute="height" constant="1" id="OrC-0h-hDf"/>
                                         </constraints>
                                     </view>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="wp6-qm-VAu">
-                                        <rect key="frame" x="460" y="7" width="140" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owv-D4-zLa">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="VvO-JW-Rfo"/>
+                                            <constraint firstAttribute="width" constant="120" id="oAQ-Z0-cqV"/>
                                         </constraints>
-                                        <color key="pageIndicatorTintColor" red="0.95686274509803926" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="currentPageIndicatorTintColor" red="0.098039215686274508" green="0.19607843137254902" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
-                                    </pageControl>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
+                                        <state key="normal" title="DEADSPIN">
+                                            <color key="titleColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="oAQ-Z0-cqV"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="0uV-7I-Zht" kind="show" identifier="showBlogList" id="DqN-3b-GRD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Owv-D4-zLa" firstAttribute="leading" secondItem="C5q-wd-3Jl" secondAttribute="leading" id="5nl-Zi-UEA"/>
-                                    <constraint firstItem="wp6-qm-VAu" firstAttribute="top" secondItem="NwH-6C-O1G" secondAttribute="bottom" constant="6" id="C8U-oW-xlw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Owv-D4-zLa" secondAttribute="trailing" id="FF5-Yq-H6a"/>
                                     <constraint firstAttribute="trailing" secondItem="NwH-6C-O1G" secondAttribute="trailing" id="HaL-jG-sJB"/>
                                     <constraint firstItem="NwH-6C-O1G" firstAttribute="leading" secondItem="C5q-wd-3Jl" secondAttribute="leading" id="PjP-Ua-bhA"/>
                                     <constraint firstAttribute="bottom" secondItem="Owv-D4-zLa" secondAttribute="bottom" id="QP4-Gb-ksM"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="QWs-8z-Qhc"/>
-                                    <constraint firstAttribute="bottom" secondItem="wp6-qm-VAu" secondAttribute="bottom" constant="6" id="ZS8-iK-RkT"/>
                                     <constraint firstItem="NwH-6C-O1G" firstAttribute="top" secondItem="C5q-wd-3Jl" secondAttribute="top" id="aqd-YX-eVM"/>
                                     <constraint firstItem="Owv-D4-zLa" firstAttribute="top" secondItem="C5q-wd-3Jl" secondAttribute="top" id="bWa-b9-hZU"/>
-                                    <constraint firstAttribute="trailing" secondItem="wp6-qm-VAu" secondAttribute="trailing" id="dSv-jG-cpE"/>
                                     <constraint firstAttribute="height" constant="50" id="xuU-5h-cEV"/>
                                 </constraints>
                             </view>
@@ -210,9 +205,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blogNameButton" destination="Owv-D4-zLa" id="czc-X0-ns9"/>
+                        <outlet property="blogButton" destination="Owv-D4-zLa" id="LGf-Cg-Sou"/>
                         <outlet property="contentView" destination="XNW-eq-uxx" id="njx-T3-C4Q"/>
-                        <outlet property="pageControl" destination="wp6-qm-VAu" id="6HF-LO-qDQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgQ-AV-pcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +236,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
                                         <state key="normal" title="CLOSE">
-                                            <color key="titleColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="closeDidPress:" destination="0uV-7I-Zht" eventType="touchUpInside" id="Zr7-mD-t4y"/>
@@ -258,7 +252,7 @@
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6Pa-hk-4hQ"/>
                                     <constraint firstItem="XFk-ig-CuB" firstAttribute="top" secondItem="fax-kM-QCU" secondAttribute="top" id="UHU-T8-nR6"/>
@@ -272,10 +266,10 @@
                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAA-nB-iOF">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="DEADSPIN">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="KE0-Yp-ihw"/>
@@ -284,10 +278,10 @@
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsL-mm-bn8">
                                 <rect key="frame" x="0.0" y="68" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="GAWKER">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="22l-rE-SxD"/>
@@ -296,10 +290,10 @@
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNg-pn-rPP">
                                 <rect key="frame" x="0.0" y="136" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="GIZMODO">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="44U-xT-vyO"/>
@@ -308,10 +302,10 @@
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lly-iN-gYR">
                                 <rect key="frame" x="0.0" y="204" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="iO9">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="Xtg-lE-fvB"/>
@@ -320,10 +314,10 @@
                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWy-Nh-uAh">
                                 <rect key="frame" x="0.0" y="272" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="JALOPNIK">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="KX3-yi-DUb"/>
@@ -332,10 +326,10 @@
                             <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-4w-ztJ">
                                 <rect key="frame" x="0.0" y="340" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="JEZEBEL">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="NsQ-IX-oAX"/>
@@ -344,10 +338,10 @@
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zth-UE-MX0">
                                 <rect key="frame" x="0.0" y="408" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="KOTAKU">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="kh3-2g-3r3"/>
@@ -356,10 +350,10 @@
                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1X-e9-Z4m">
                                 <rect key="frame" x="0.0" y="476" width="600" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                                 <state key="normal" title="LIFEHACKER">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.40784313729999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="blogHasBeenChoser:" destination="0uV-7I-Zht" eventType="touchUpInside" id="tBk-s0-eaC"/>
@@ -368,7 +362,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gau-2h-JvP" userLabel="Border Deadspin">
                                 <rect key="frame" x="0.0" y="67" width="600" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FDW-4q-awc"/>
                                 </constraints>
@@ -376,7 +370,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-ux-bAg" userLabel="Border Gawker">
                                 <rect key="frame" x="0.0" y="135" width="600" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="tey-dN-fQS"/>
                                 </constraints>
@@ -384,7 +378,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVM-cW-Qn1" userLabel="Border Gizmodo">
                                 <rect key="frame" x="0.0" y="203" width="600" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="bfa-1T-Wc1"/>
                                 </constraints>
@@ -392,7 +386,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-HH-eTk" userLabel="Border io9">
                                 <rect key="frame" x="0.0" y="271" width="600" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="apH-2x-Oxr"/>
                                 </constraints>
@@ -400,7 +394,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwe-mf-Thv" userLabel="Border jalopnik">
                                 <rect key="frame" x="0.0" y="339" width="600" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="sOB-Oa-6vU"/>
                                 </constraints>
@@ -408,7 +402,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAT-VV-nbj" userLabel="Border jezebel">
                                 <rect key="frame" x="0.0" y="407" width="600" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="tCC-l1-LIK"/>
                                 </constraints>
@@ -416,7 +410,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMp-hQ-Wr9" userLabel="Border kotaku">
                                 <rect key="frame" x="0.0" y="475" width="600" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="G7Q-tu-mFb"/>
                                 </constraints>

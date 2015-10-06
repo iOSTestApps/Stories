@@ -16,9 +16,9 @@
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
 
-#define kCurrentBlog @"kCurrentBlog"\
+#define kCurrentBlog @"kCurrentBlog"
 
-@interface Top5ForBlogViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, ChoseBlogViewControllerDelegate, HeadlineViewControllerDelegate>
+@interface Top5ForBlogViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, ChoseBlogViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UIButton *blogNameButton;
@@ -115,7 +115,7 @@
     HeadlineViewController *headlineViewController = [[HeadlineViewController alloc] initWithNibName:@"HeadlineViewController" bundle:nil];
     headlineViewController.post = index < [objects count] ? objects[index] : nil;
     headlineViewController.view.tag = index;
-    headlineViewController.delegate = self;
+    //headlineViewController.delegate = self;
     return headlineViewController;
 }
 

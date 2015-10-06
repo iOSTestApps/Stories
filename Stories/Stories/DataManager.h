@@ -25,6 +25,8 @@
 
 - (void)createDefaultGMGBlogs;
 - (Blog *)getBlogWithID:(NSNumber *)blogID;
+- (NSArray *)getBlogsAndSubBlogsWithID:(NSNumber *)blogID;
+- (NSArray *)getPostsForBlog:(Blog *)blog;
 - (void)fetchPostsForBlog:(Blog *)blog;
 
 @end

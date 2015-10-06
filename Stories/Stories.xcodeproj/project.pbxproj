@@ -31,6 +31,14 @@
 		91EA537A1BC28209001607BA /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA53791BC28209001607BA /* libGoogleAnalyticsServices.a */; settings = {ASSET_TAGS = (); }; };
 		91EA53801BC282FD001607BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA537F1BC282FD001607BA /* libz.tbd */; };
 		91EA53821BC28304001607BA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA53811BC28304001607BA /* libsqlite3.tbd */; };
+		91EA53841BC3B1BF001607BA /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EA53831BC3B1BF001607BA /* Test.storyboard */; settings = {ASSET_TAGS = (); }; };
+		91EA538A1BC3B2CD001607BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53891BC3B2CD001607BA /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		91EA53931BC3B432001607BA /* TopPostsForBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53911BC3B432001607BA /* TopPostsForBlogViewController.m */; settings = {ASSET_TAGS = (); }; };
+		91EA53941BC3B432001607BA /* TopPostsForBlogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91EA53921BC3B432001607BA /* TopPostsForBlogViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		91EA53981BC3B441001607BA /* BlogFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53961BC3B441001607BA /* BlogFamilyViewController.m */; settings = {ASSET_TAGS = (); }; };
+		91EA53991BC3B441001607BA /* BlogFamilyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91EA53971BC3B441001607BA /* BlogFamilyViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		91EA539C1BC3B95A001607BA /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA539B1BC3B95A001607BA /* APIClient.m */; settings = {ASSET_TAGS = (); }; };
+		91EA539E1BC3D50D001607BA /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91EA539D1BC3D50D001607BA /* ArticleViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		91ECA2251BB97ED40033E44D /* UIViewController+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2241BB97ED40033E44D /* UIViewController+Utilities.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2321BB9C6B80033E44D /* Image+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2271BB9C6B80033E44D /* Image+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2331BB9C6B80033E44D /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2291BB9C6B80033E44D /* Image.m */; settings = {ASSET_TAGS = (); }; };
@@ -109,6 +117,18 @@
 		91EA53791BC28209001607BA /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		91EA537F1BC282FD001607BA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		91EA53811BC28304001607BA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		91EA53831BC3B1BF001607BA /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		91EA53881BC3B2CD001607BA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		91EA53891BC3B2CD001607BA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		91EA53901BC3B432001607BA /* TopPostsForBlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPostsForBlogViewController.h; sourceTree = "<group>"; };
+		91EA53911BC3B432001607BA /* TopPostsForBlogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPostsForBlogViewController.m; sourceTree = "<group>"; };
+		91EA53921BC3B432001607BA /* TopPostsForBlogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopPostsForBlogViewController.xib; sourceTree = "<group>"; };
+		91EA53951BC3B441001607BA /* BlogFamilyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogFamilyViewController.h; sourceTree = "<group>"; };
+		91EA53961BC3B441001607BA /* BlogFamilyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogFamilyViewController.m; sourceTree = "<group>"; };
+		91EA53971BC3B441001607BA /* BlogFamilyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogFamilyViewController.xib; sourceTree = "<group>"; };
+		91EA539A1BC3B95A001607BA /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		91EA539B1BC3B95A001607BA /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		91EA539D1BC3D50D001607BA /* ArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
 		91ECA2231BB97ED40033E44D /* UIViewController+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utilities.h"; sourceTree = "<group>"; };
 		91ECA2241BB97ED40033E44D /* UIViewController+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utilities.m"; sourceTree = "<group>"; };
 		91ECA2261BB9C6B80033E44D /* Image+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Image+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -189,8 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				91FE509C1BBC0F7A007FEC23 /* Libs */,
-				91EA53811BC28304001607BA /* libsqlite3.tbd */,
-				91EA537F1BC282FD001607BA /* libz.tbd */,
 				91FE509D1BBC0F85007FEC23 /* Assets */,
 				91F68BB71BBAB96E00C2669B /* Categories */,
 				91E4CC421BB96BE40059C79B /* Controllers */,
@@ -198,6 +216,7 @@
 				91E4CBF91BB943600059C79B /* AppDelegate.h */,
 				91E4CBFA1BB943600059C79B /* AppDelegate.m */,
 				91E4CBFF1BB943600059C79B /* Main.storyboard */,
+				91EA53831BC3B1BF001607BA /* Test.storyboard */,
 				91E4CC071BB943600059C79B /* LaunchScreen.storyboard */,
 				91E4CBF61BB943600059C79B /* Supporting Files */,
 			);
@@ -257,6 +276,8 @@
 			children = (
 				91ECA2391BBA595E0033E44D /* DataManager.h */,
 				91ECA23A1BBA595E0033E44D /* DataManager.m */,
+				91EA539A1BC3B95A001607BA /* APIClient.h */,
+				91EA539B1BC3B95A001607BA /* APIClient.m */,
 				91ECA2261BB9C6B80033E44D /* Image+CoreDataProperties.h */,
 				91ECA2271BB9C6B80033E44D /* Image+CoreDataProperties.m */,
 				91ECA2281BB9C6B80033E44D /* Image.h */,
@@ -279,6 +300,7 @@
 			children = (
 				91E4CBFC1BB943600059C79B /* ArticleViewController.h */,
 				91E4CBFD1BB943600059C79B /* ArticleViewController.m */,
+				91EA539D1BC3D50D001607BA /* ArticleViewController.xib */,
 				91E4CC381BB95C6E0059C79B /* ChoseBlogViewController.h */,
 				91E4CC391BB95C6E0059C79B /* ChoseBlogViewController.m */,
 				91E4CC431BB96CC40059C79B /* Top5ForBlogViewController.h */,
@@ -286,6 +308,14 @@
 				91E4CC461BB975F50059C79B /* HeadlineViewController.h */,
 				91E4CC471BB975F50059C79B /* HeadlineViewController.m */,
 				91E4CC481BB975F50059C79B /* HeadlineViewController.xib */,
+				91EA53881BC3B2CD001607BA /* MainViewController.h */,
+				91EA53891BC3B2CD001607BA /* MainViewController.m */,
+				91EA53901BC3B432001607BA /* TopPostsForBlogViewController.h */,
+				91EA53911BC3B432001607BA /* TopPostsForBlogViewController.m */,
+				91EA53921BC3B432001607BA /* TopPostsForBlogViewController.xib */,
+				91EA53951BC3B441001607BA /* BlogFamilyViewController.h */,
+				91EA53961BC3B441001607BA /* BlogFamilyViewController.m */,
+				91EA53971BC3B441001607BA /* BlogFamilyViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -324,6 +354,8 @@
 		91FE509C1BBC0F7A007FEC23 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				91EA53811BC28304001607BA /* libsqlite3.tbd */,
+				91EA537F1BC282FD001607BA /* libz.tbd */,
 				91EA536E1BC281D6001607BA /* GoogleAnalytics */,
 				91E4CC3B1BB961EF0059C79B /* ARSafariActivity */,
 				91EA536C1BC28027001607BA /* SystemConfiguration.framework */,
@@ -452,7 +484,11 @@
 				91E4CC091BB943600059C79B /* LaunchScreen.storyboard in Resources */,
 				91E4CC331BB94DD40059C79B /* SF-UI-Display-Heavy.otf in Resources */,
 				91E4CC321BB94DD40059C79B /* SF-UI-Display-Bold.otf in Resources */,
+				91EA53841BC3B1BF001607BA /* Test.storyboard in Resources */,
 				91E4CC2D1BB949E20059C79B /* PMN_Caecilia_45_Light.ttf in Resources */,
+				91EA53991BC3B441001607BA /* BlogFamilyViewController.xib in Resources */,
+				91EA539E1BC3D50D001607BA /* ArticleViewController.xib in Resources */,
+				91EA53941BC3B432001607BA /* TopPostsForBlogViewController.xib in Resources */,
 				91E4CC3F1BB962030059C79B /* ARSafariActivity.bundle in Resources */,
 				91E4CC061BB943600059C79B /* Assets.xcassets in Resources */,
 				91E4CC4A1BB975F50059C79B /* HeadlineViewController.xib in Resources */,
@@ -502,8 +538,12 @@
 				91E4CC451BB96CC40059C79B /* Top5ForBlogViewController.m in Sources */,
 				91ECA2251BB97ED40033E44D /* UIViewController+Utilities.m in Sources */,
 				91E4CC3A1BB95C6E0059C79B /* ChoseBlogViewController.m in Sources */,
+				91EA539C1BC3B95A001607BA /* APIClient.m in Sources */,
 				91ECA2371BB9C6B80033E44D /* Blog.m in Sources */,
+				91EA538A1BC3B2CD001607BA /* MainViewController.m in Sources */,
 				91E4CBFE1BB943600059C79B /* ArticleViewController.m in Sources */,
+				91EA53981BC3B441001607BA /* BlogFamilyViewController.m in Sources */,
+				91EA53931BC3B432001607BA /* TopPostsForBlogViewController.m in Sources */,
 				91ECA2341BB9C6B80033E44D /* Post+CoreDataProperties.m in Sources */,
 				91ECA2361BB9C6B80033E44D /* Blog+CoreDataProperties.m in Sources */,
 				914350111BBC752000B6B5E7 /* Stories.xcdatamodeld in Sources */,

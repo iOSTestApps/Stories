@@ -10,6 +10,7 @@
 #import "ARSafariActivity.h"
 #import "GAI.h"
 #import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface ArticleViewController () <UIWebViewDelegate>
 
@@ -86,9 +87,18 @@
     ARSafariActivity *safariActivity = [[ARSafariActivity alloc] init];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:@[safariActivity]];
     
-    [activityVC setValue:@"PETER SAGAN WINS CYCLING WORLD CHAMPIONSHIP WITH LATE ATTACK" forKey:@"subject"];
-
+    [activityVC setValue:self.post.postHeadline forKey:@"subject"];
     
+    [activityVC setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+        // Send Google Analytics Event
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Post"     // Event category (required)
+                                                              action:@"ShareArticle"  // Event action (required)
+                                                               label:activityType          // Event label
+                                                               value:nil] build]];    // Event value
+    }];
+
+
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 
