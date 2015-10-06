@@ -118,6 +118,7 @@
     
     Blog *selectedBlog = self.blogs[button.tag];
     [self blogHasBeenSelected:selectedBlog.blogID];
+    self.pageControl.currentPage = 0;
 }
 
 - (IBAction)blogButtonDidPress:(id)sender
