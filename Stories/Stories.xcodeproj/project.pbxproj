@@ -23,7 +23,6 @@
 		91E4CC3A1BB95C6E0059C79B /* ChoseBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4CC391BB95C6E0059C79B /* ChoseBlogViewController.m */; settings = {ASSET_TAGS = (); }; };
 		91E4CC3F1BB962030059C79B /* ARSafariActivity.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91E4CC3C1BB962030059C79B /* ARSafariActivity.bundle */; settings = {ASSET_TAGS = (); }; };
 		91E4CC401BB962030059C79B /* ARSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4CC3E1BB962030059C79B /* ARSafariActivity.m */; settings = {ASSET_TAGS = (); }; };
-		91E4CC451BB96CC40059C79B /* Top5ForBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4CC441BB96CC40059C79B /* Top5ForBlogViewController.m */; settings = {ASSET_TAGS = (); }; };
 		91E4CC491BB975F50059C79B /* HeadlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4CC471BB975F50059C79B /* HeadlineViewController.m */; settings = {ASSET_TAGS = (); }; };
 		91E4CC4A1BB975F50059C79B /* HeadlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E4CC481BB975F50059C79B /* HeadlineViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		91EA536B1BC2801F001607BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA536A1BC2801F001607BA /* CoreData.framework */; };
@@ -97,8 +96,6 @@
 		91E4CC3C1BB962030059C79B /* ARSafariActivity.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ARSafariActivity.bundle; sourceTree = "<group>"; };
 		91E4CC3D1BB962030059C79B /* ARSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSafariActivity.h; sourceTree = "<group>"; };
 		91E4CC3E1BB962030059C79B /* ARSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSafariActivity.m; sourceTree = "<group>"; };
-		91E4CC431BB96CC40059C79B /* Top5ForBlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Top5ForBlogViewController.h; sourceTree = "<group>"; };
-		91E4CC441BB96CC40059C79B /* Top5ForBlogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Top5ForBlogViewController.m; sourceTree = "<group>"; };
 		91E4CC461BB975F50059C79B /* HeadlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlineViewController.h; sourceTree = "<group>"; };
 		91E4CC471BB975F50059C79B /* HeadlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlineViewController.m; sourceTree = "<group>"; };
 		91E4CC481BB975F50059C79B /* HeadlineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadlineViewController.xib; sourceTree = "<group>"; };
@@ -303,8 +300,6 @@
 				91EA539D1BC3D50D001607BA /* ArticleViewController.xib */,
 				91E4CC381BB95C6E0059C79B /* ChoseBlogViewController.h */,
 				91E4CC391BB95C6E0059C79B /* ChoseBlogViewController.m */,
-				91E4CC431BB96CC40059C79B /* Top5ForBlogViewController.h */,
-				91E4CC441BB96CC40059C79B /* Top5ForBlogViewController.m */,
 				91E4CC461BB975F50059C79B /* HeadlineViewController.h */,
 				91E4CC471BB975F50059C79B /* HeadlineViewController.m */,
 				91E4CC481BB975F50059C79B /* HeadlineViewController.xib */,
@@ -536,7 +531,6 @@
 			files = (
 				91ECA2351BB9C6B80033E44D /* Post.m in Sources */,
 				91ECA2331BB9C6B80033E44D /* Image.m in Sources */,
-				91E4CC451BB96CC40059C79B /* Top5ForBlogViewController.m in Sources */,
 				91ECA2251BB97ED40033E44D /* UIViewController+Utilities.m in Sources */,
 				91E4CC3A1BB95C6E0059C79B /* ChoseBlogViewController.m in Sources */,
 				91EA539C1BC3B95A001607BA /* APIClient.m in Sources */,
