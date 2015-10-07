@@ -34,6 +34,7 @@
                     h2{font-family: SF UI Display;line-height: 115%%;font-size: 130%%;} \
                     h3{font-family: SF UI Display;line-height: 110%%;font-size: 100%%;} \
                     h4{font-family: SF UI Display;line-height: 100%%;font-size: 90%%;} \
+                    ul { padding: 20px; } \
                     a:link{ color: #457B9D; text-decoration: none; } \
                     a:visited{ color: #457B9D; } \
                     a:hover{ color: #457B9D; } \
