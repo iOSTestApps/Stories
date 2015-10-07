@@ -44,7 +44,7 @@
                         </label>
                     </subviews>
                     <animations/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="0SD-ZV-H6b" secondAttribute="bottom" constant="15" id="Ft1-EK-Dd6"/>
                         <constraint firstItem="0SD-ZV-H6b" firstAttribute="top" secondItem="G7C-Gt-fFG" secondAttribute="top" constant="15" id="PIf-wa-A7v"/>
