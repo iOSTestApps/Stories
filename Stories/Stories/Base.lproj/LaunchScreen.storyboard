@@ -18,18 +18,18 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-ZC-KrF" userLabel="ToolBar">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Current Stories From Kinja" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gff-9i-cp7">
-                                        <rect key="frame" x="173" y="14" width="254" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Best Current Stories From Kinja" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gff-9i-cp7">
+                                        <rect key="frame" x="173" y="15" width="255" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
-                                        <color key="textColor" red="0.78039215689999997" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.070588235294117646" green="0.12156862745098039" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -41,7 +41,7 @@
                                     <constraint firstItem="Gff-9i-cp7" firstAttribute="centerX" secondItem="uiw-ZC-KrF" secondAttribute="centerX" id="ly9-tZ-2k6"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo 180" translatesAutoresizingMaskIntoConstraints="NO" id="5E1-Nv-riA">
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stories_logo-transparent" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5E1-Nv-riA">
                                 <rect key="frame" x="224" y="174" width="152" height="152"/>
                                 <animations/>
                                 <constraints>
@@ -51,7 +51,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.86274509799999999" green="0.12941176469999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.40000000000000002" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5E1-Nv-riA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="LIE-KM-6qB"/>
                             <constraint firstItem="5E1-Nv-riA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ol6-sA-9bk"/>
@@ -68,6 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo 180" width="180" height="179"/>
+        <image name="stories_logo-transparent" width="120" height="120"/>
     </resources>
 </document>
