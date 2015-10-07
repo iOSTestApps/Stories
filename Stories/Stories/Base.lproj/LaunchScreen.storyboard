@@ -22,15 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_120" translatesAutoresizingMaskIntoConstraints="NO" id="YEy-v0-zqY">
-                                <rect key="frame" x="240" y="185" width="120" height="120"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="9VH-pe-dhY"/>
-                                    <constraint firstAttribute="width" constant="120" id="qrb-lo-h3u"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-ZC-KrF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-ZC-KrF" userLabel="ToolBar">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Current Stories From Kinja" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gff-9i-cp7">
@@ -42,19 +34,27 @@
                                     </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.97254901959999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Gff-9i-cp7" firstAttribute="centerY" secondItem="uiw-ZC-KrF" secondAttribute="centerY" id="NRP-hX-gcX"/>
                                     <constraint firstAttribute="height" constant="50" id="bot-lJ-GWd"/>
                                     <constraint firstItem="Gff-9i-cp7" firstAttribute="centerX" secondItem="uiw-ZC-KrF" secondAttribute="centerX" id="ly9-tZ-2k6"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo 180" translatesAutoresizingMaskIntoConstraints="NO" id="5E1-Nv-riA">
+                                <rect key="frame" x="224" y="174" width="152" height="152"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="ac4-5G-867"/>
+                                    <constraint firstAttribute="width" constant="152" id="kll-UW-VQY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.78039215689999997" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.12941176469999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="YEy-v0-zqY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HRO-Uf-T3K"/>
-                            <constraint firstItem="YEy-v0-zqY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-55" id="JQB-6l-j5a"/>
+                            <constraint firstItem="5E1-Nv-riA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="LIE-KM-6qB"/>
+                            <constraint firstItem="5E1-Nv-riA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ol6-sA-9bk"/>
                             <constraint firstAttribute="trailing" secondItem="uiw-ZC-KrF" secondAttribute="trailing" id="PQZ-Lh-nX6"/>
                             <constraint firstItem="uiw-ZC-KrF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Tnf-im-lWe"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="uiw-ZC-KrF" secondAttribute="bottom" id="h8g-kk-iQW"/>
@@ -68,6 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo_120" width="120" height="120"/>
+        <image name="Logo 180" width="180" height="179"/>
     </resources>
 </document>

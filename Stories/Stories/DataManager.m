@@ -129,7 +129,7 @@
     Blog *blogGizmodo = [self createBlog:@{@"displayName":@"Gizmodo", @"host":@"gizmodo.com", @"id":@(4), @"topic" : @"Technology"} withParentBlog:nil];
     [self createBlog:@{@"displayName":@"Sploid",            @"host":@"sploid.gizmodo.com",@"id":@(487662860)} withParentBlog:blogGizmodo];
 //    [self createBlog:@{@"displayName":@"Indefinitely Wild", @"host":@"indefinitelywild.gizmodo.com",@"id":@(1580652334)} withParentBlog:blogGizmodo];
-    [self createBlog:@{@"displayName":@"Field Guide",       @"host":@"fieldguide.gizmodo.com",@"id":@(1570534851)} withParentBlog:blogGizmodo];
+    [self createBlog:@{@"displayName":@"Field Guide",       @"host":@"fieldguide.gizmodo.com",@"id":@(1580652334)} withParentBlog:blogGizmodo];
 //    [self createBlog:@{@"displayName":@"Toyland",           @"host":@"toyland.gizmodo.com",@"id":@(1624665724)} withParentBlog:blogGizmodo];
 //    [self createBlog:@{@"displayName":@"Paleofuture",       @"host":@"paleofuture.gizmodo.com",@"id":@(510682837)} withParentBlog:blogGizmodo];
     
