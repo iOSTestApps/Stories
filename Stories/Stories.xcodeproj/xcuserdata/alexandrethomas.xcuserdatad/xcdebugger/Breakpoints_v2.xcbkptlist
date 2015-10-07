@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stories/HeadlineViewController.m"
-            timestampString = "465923423.057033"
+            timestampString = "465946851.495331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-getImageURLToDownload"
             landmarkType = "5">
          </BreakpointContent>

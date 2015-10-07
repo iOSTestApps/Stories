@@ -13,6 +13,7 @@
 #import "DataManager.h"
 #import "ArticleViewController.h"
 #import "GAI.h"
+#import "DetailPost.h"
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
 #import "Reachability.h"
@@ -61,6 +62,9 @@
 - (void)tapToShow:(UITapGestureRecognizer *)tap
 {
     if(tap.numberOfTapsRequired > 1)
+        return;
+    
+    if(self.post.detailPost.display == nil)
         return;
     
     ArticleViewController *articleVC = [[ArticleViewController alloc] initWithNibName:@"ArticleViewController" bundle:nil];

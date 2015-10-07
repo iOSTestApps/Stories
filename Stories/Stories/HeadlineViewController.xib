@@ -33,13 +33,13 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7C-Gt-fFG">
-                    <rect key="frame" x="0.0" y="527" width="600" height="73"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7C-Gt-fFG">
+                    <rect key="frame" x="0.0" y="528" width="600" height="72"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SD-ZV-H6b">
-                            <rect key="frame" x="30" y="15" width="540" height="43"/>
+                            <rect key="frame" x="18" y="15" width="564" height="41"/>
                             <animations/>
-                            <fontDescription key="fontDescription" name="SFUIDisplay-Heavy" family="SF UI Display" pointSize="36"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Heavy" family="SF UI Display" pointSize="34"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -49,8 +49,8 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="0SD-ZV-H6b" secondAttribute="bottom" constant="15" id="Ft1-EK-Dd6"/>
                         <constraint firstItem="0SD-ZV-H6b" firstAttribute="top" secondItem="G7C-Gt-fFG" secondAttribute="top" constant="15" id="PIf-wa-A7v"/>
-                        <constraint firstAttribute="trailing" secondItem="0SD-ZV-H6b" secondAttribute="trailing" constant="30" id="g0H-WO-u8L"/>
-                        <constraint firstItem="0SD-ZV-H6b" firstAttribute="leading" secondItem="G7C-Gt-fFG" secondAttribute="leading" constant="30" id="gk2-eE-WQS"/>
+                        <constraint firstAttribute="trailing" secondItem="0SD-ZV-H6b" secondAttribute="trailing" constant="18" id="g0H-WO-u8L"/>
+                        <constraint firstItem="0SD-ZV-H6b" firstAttribute="leading" secondItem="G7C-Gt-fFG" secondAttribute="leading" constant="18" id="gk2-eE-WQS"/>
                     </constraints>
                 </view>
                 <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aBf-JC-ZY8">
@@ -80,6 +80,6 @@
         </view>
     </objects>
     <resources>
-        <image name="background-image-dark" width="750" height="1334"/>
+        <image name="background-image-dark" width="1242" height="2208"/>
     </resources>
 </document>

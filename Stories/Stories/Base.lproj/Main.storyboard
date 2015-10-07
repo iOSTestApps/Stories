@@ -197,7 +197,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owv-D4-zLa">
-                                        <rect key="frame" x="8" y="0.0" width="452" height="50"/>
+                                        <rect key="frame" x="8" y="0.0" width="462" height="50"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="xFp-bf-VNC"/>
@@ -217,10 +217,10 @@
                                         </connections>
                                     </button>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gwf-gw-MOC">
-                                        <rect key="frame" x="480" y="6" width="120" height="37"/>
+                                        <rect key="frame" x="490" y="6" width="110" height="37"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="c8D-D4-dih"/>
+                                            <constraint firstAttribute="width" constant="110" id="c8D-D4-dih"/>
                                             <constraint firstAttribute="height" constant="37" id="kqb-2t-cfs"/>
                                         </constraints>
                                         <color key="pageIndicatorTintColor" red="0.84705882349999995" green="0.85098039219999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
