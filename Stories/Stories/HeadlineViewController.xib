@@ -24,9 +24,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newyork" translatesAutoresizingMaskIntoConstraints="NO" id="vDT-YX-fGw">
+                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-image-dark" translatesAutoresizingMaskIntoConstraints="NO" id="vDT-YX-fGw">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <animations/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
@@ -79,6 +80,6 @@
         </view>
     </objects>
     <resources>
-        <image name="newyork" width="750" height="1334"/>
+        <image name="background-image-dark" width="750" height="1334"/>
     </resources>
 </document>

@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-image" translatesAutoresizingMaskIntoConstraints="NO" id="9Qx-Kn-YYz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-ZC-KrF" userLabel="ToolBar">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
@@ -41,23 +45,16 @@
                                     <constraint firstItem="Gff-9i-cp7" firstAttribute="centerX" secondItem="uiw-ZC-KrF" secondAttribute="centerX" id="ly9-tZ-2k6"/>
                                 </constraints>
                             </view>
-                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5E1-Nv-riA">
-                                <rect key="frame" x="224" y="174" width="152" height="152"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="ac4-5G-867"/>
-                                    <constraint firstAttribute="width" constant="152" id="kll-UW-VQY"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.21176470588235294" green="0.40000000000000002" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5E1-Nv-riA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="LIE-KM-6qB"/>
-                            <constraint firstItem="5E1-Nv-riA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ol6-sA-9bk"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9Qx-Kn-YYz" secondAttribute="bottom" id="KAI-1I-U6d"/>
                             <constraint firstAttribute="trailing" secondItem="uiw-ZC-KrF" secondAttribute="trailing" id="PQZ-Lh-nX6"/>
                             <constraint firstItem="uiw-ZC-KrF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Tnf-im-lWe"/>
+                            <constraint firstItem="9Qx-Kn-YYz" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="gVC-zY-2UT"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="uiw-ZC-KrF" secondAttribute="bottom" id="h8g-kk-iQW"/>
+                            <constraint firstItem="9Qx-Kn-YYz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="qHE-dG-h16"/>
+                            <constraint firstAttribute="trailing" secondItem="9Qx-Kn-YYz" secondAttribute="trailing" id="swG-JV-6cE"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -68,6 +65,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="80" height="80"/>
+        <image name="background-image" width="750" height="1334"/>
     </resources>
 </document>
