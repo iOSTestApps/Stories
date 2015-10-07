@@ -52,11 +52,21 @@
 {
     int seconds = [[NSDate date] timeIntervalSinceDate:self.post.publishTime];
     int forHours = seconds / 3600;
+    int days = forHours / 24;
+    int weeks = days / 7;
     int remainder = seconds % 3600;
     int forMinutes = remainder / 60;
     
     NSString *ago;
-    if(forHours > 1)
+    if(weeks > 1)
+        ago = [NSString stringWithFormat:@"%d weeks ago", weeks];
+    else if(weeks == 1)
+        ago = [NSString stringWithFormat:@"%d week ago", weeks];
+    else if(days > 1)
+        ago = [NSString stringWithFormat:@"%d days ago", days];
+    else if(days == 1)
+        ago = [NSString stringWithFormat:@"%d day ago", days];
+    else if(forHours > 1)
         ago = [NSString stringWithFormat:@"%d hours ago", forHours];
     else if(forHours == 1)
         ago = [NSString stringWithFormat:@"%d hour ago", forHours];
