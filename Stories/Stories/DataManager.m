@@ -10,6 +10,7 @@
 #import "NSDictionary+Utilities.h"
 #import "APIClient.h"
 #import "NSDate+Utilities.h"
+#import "DetailPost.h"
 
 #define kBlogsFetchedDate @"kBlogsFetchedDate"
 
@@ -388,9 +389,11 @@
         if(post == nil)
             continue;
         
-        if(post.display == nil) {
+        if(post.detailPost == nil) {
+            DetailPost *detailPost = [NSEntityDescription insertNewObjectForEntityForName:@"DetailPost" inManagedObjectContext:self.insertionContext];
             NSString *display = [postData valueForKey:@"display"];
-            post.display = display;
+            detailPost.display = display;
+            post.detailPost = detailPost;
         }
         
         if(post.image == nil) {

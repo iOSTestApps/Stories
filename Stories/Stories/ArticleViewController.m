@@ -11,6 +11,7 @@
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
+#import "DetailPost.h"
 
 @interface ArticleViewController () <UIWebViewDelegate>
 
@@ -24,7 +25,7 @@
 {
     [super viewDidLoad];
 
-    NSString *display = [[[self.post.display stringByReplacingOccurrencesOfString:@"width=" withString:@"width=\"100%\" dummyWidth="]
+    NSString *display = [[[self.post.detailPost.display stringByReplacingOccurrencesOfString:@"width=" withString:@"width=\"100%\" dummyWidth="]
                                             stringByReplacingOccurrencesOfString:@"height=" withString:@"dummyHeight="]
                                             stringByReplacingOccurrencesOfString:@"<iframe src=\"http://gawker-labs.com" withString:@"<iframe style=\"visibility: hidden;height:0;\" src=\"http://gawker-labs.com"];
     

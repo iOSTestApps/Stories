@@ -9,6 +9,10 @@
         <relationship name="parentBlog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Blog" inverseName="childrenBlogs" inverseEntity="Blog" syncable="YES"/>
         <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="blog" inverseEntity="Post" syncable="YES"/>
     </entity>
+    <entity name="DetailPost" representedClassName="DetailPost" syncable="YES">
+        <attribute name="display" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="detailPost" inverseEntity="Post" syncable="YES"/>
+    </entity>
     <entity name="Image" representedClassName="Image" syncable="YES">
         <attribute name="downloaded" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="imageID" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,7 +21,6 @@
     </entity>
     <entity name="Post" representedClassName="Post" syncable="YES">
         <attribute name="authorName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="display" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fetchedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="permalink" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="postHeadline" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,11 +28,13 @@
         <attribute name="publishTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="blog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Blog" inverseName="posts" inverseEntity="Blog" syncable="YES"/>
+        <relationship name="detailPost" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DetailPost" inverseName="post" inverseEntity="DetailPost" syncable="YES"/>
         <relationship name="image" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Image" inverseName="post" inverseEntity="Image" syncable="YES"/>
     </entity>
     <elements>
         <element name="Blog" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="Image" positionX="-36" positionY="63" width="128" height="105"/>
         <element name="Post" positionX="-54" positionY="18" width="128" height="195"/>
+        <element name="DetailPost" positionX="-54" positionY="81" width="128" height="75"/>
     </elements>
 </model>
