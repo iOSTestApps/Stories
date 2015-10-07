@@ -111,41 +111,41 @@
     if([prefs objectForKey:kBlogsFetchedDate] != nil)
         return;
     
-    Blog *blogDeadspin = [self createBlog:@{@"displayName":@"Deadspin", @"host":@"deadspin.com", @"id":@(11), @"topic" : @"Sport"} withParentBlog:nil];
+    Blog *blogDeadspin = [self createBlog:@{@"displayName":@"Deadspin", @"host":@"deadspin.com", @"id":@(11), @"topic" : @"Sports"} withParentBlog:nil];
     [self createBlog:@{@"displayName":@"Screengrabber", @"host":@"screengrabber.deadspin.com",  @"id":@(450670265)} withParentBlog:blogDeadspin];
 //    [self createBlog:@{@"displayName":@"Regressing",    @"host":@"regressing.deadspin.com",     @"id":@(1070195507)} withParentBlog:blogDeadspin];
     [self createBlog:@{@"displayName":@"The Concourse", @"host":@"theconcourse.deadspin.com",   @"id":@(1545464977)} withParentBlog:blogDeadspin];
-//    [self createBlog:@{@"displayName":@"Screamer",      @"host":@"screamer.deadspin.com",       @"id":@(1578711919)} withParentBlog:blogDeadspin];
-//    [self createBlog:@{@"displayName":@"Adequate Man",  @"host":@"adequateman.deadspin.com",    @"id":@(1634307700)} withParentBlog:blogDeadspin];
+    [self createBlog:@{@"displayName":@"Screamer",      @"host":@"screamer.deadspin.com",       @"id":@(1578711919)} withParentBlog:blogDeadspin];
+    [self createBlog:@{@"displayName":@"Adequate Man",  @"host":@"adequateman.deadspin.com",    @"id":@(1634307700)} withParentBlog:blogDeadspin];
     
     Blog *blogGawker = [self createBlog:@{@"displayName":@"Gawker", @"host":@"gawker.com", @"id":@(7), @"topic" : @"Gossips"} withParentBlog:nil];
     [self createBlog:@{@"displayName":@"Valleywag",     @"host":@"valleywag.gawker.com",    @"id":@(474833009)} withParentBlog:blogGawker];
     [self createBlog:@{@"displayName":@"Defamer",       @"host":@"defamer.gawker.com",      @"id":@(512288369)} withParentBlog:blogGawker];
-//    [self createBlog:@{@"displayName":@"Morning After", @"host":@"morningafter.gawker.com", @"id":@(1570534851)} withParentBlog:blogGawker];
+    [self createBlog:@{@"displayName":@"Morning After", @"host":@"morningafter.gawker.com", @"id":@(1570534851)} withParentBlog:blogGawker];
 //    [self createBlog:@{@"displayName":@"True Stories",  @"host":@"truestories.gawker.com",  @"id":@(1634311826)} withParentBlog:blogGawker];
 //    [self createBlog:@{@"displayName":@"TKTK",          @"host":@"tktk.gawker.com",         @"id":@(1634311851)} withParentBlog:blogGawker];
     
-    Blog *blogGizmodo = [self createBlog:@{@"displayName":@"Gizmodo", @"host":@"gizmodo.com", @"id":@(4), @"topic" : @"Tech"} withParentBlog:nil];
+    Blog *blogGizmodo = [self createBlog:@{@"displayName":@"Gizmodo", @"host":@"gizmodo.com", @"id":@(4), @"topic" : @"Technology"} withParentBlog:nil];
     [self createBlog:@{@"displayName":@"Sploid",            @"host":@"sploid.gizmodo.com",@"id":@(487662860)} withParentBlog:blogGizmodo];
 //    [self createBlog:@{@"displayName":@"Indefinitely Wild", @"host":@"indefinitelywild.gizmodo.com",@"id":@(1580652334)} withParentBlog:blogGizmodo];
     [self createBlog:@{@"displayName":@"Field Guide",       @"host":@"fieldguide.gizmodo.com",@"id":@(1570534851)} withParentBlog:blogGizmodo];
 //    [self createBlog:@{@"displayName":@"Toyland",           @"host":@"toyland.gizmodo.com",@"id":@(1624665724)} withParentBlog:blogGizmodo];
 //    [self createBlog:@{@"displayName":@"Paleofuture",       @"host":@"paleofuture.gizmodo.com",@"id":@(510682837)} withParentBlog:blogGizmodo];
     
-    Blog *blogiO9 = [self createBlog:@{@"displayName":@"iO9",   @"host":@"io9.com", @"id":@(8), @"topic" : @"Science Fiction"} withParentBlog:nil];
+    Blog *blogiO9 = [self createBlog:@{@"displayName":@"iO9",   @"host":@"io9.com", @"id":@(8), @"topic" : @"Science Fiction, Space"} withParentBlog:nil];
     [self createBlog:@{@"displayName":@"Earth & Space",         @"host":@"space.io9.com",       @"id":@(10011694)} withParentBlog:blogiO9];
 //    [self createBlog:@{@"displayName":@"Animals",               @"host":@"animals.io9.com",     @"id":@(1537065437)} withParentBlog:blogiO9];
 //    [self createBlog:@{@"displayName":@"Toybox",                @"host":@"toybox.io9.com",      @"id":@(1623827663)} withParentBlog:blogiO9];
 //    [self createBlog:@{@"displayName":@"True Crime",            @"host":@"truecrime.io9.com",   @"id":@(1634183237)} withParentBlog:blogiO9];
     
-    Blog *blogJalopnik = [self createBlog:@{@"displayName":@"Jalopnik", @"host":@"jalopnik.com", @"id":@(12), @"topic" : @"Cars"} withParentBlog:nil];
+    Blog *blogJalopnik = [self createBlog:@{@"displayName":@"Jalopnik", @"host":@"jalopnik.com", @"id":@(12), @"topic" : @"Cars, Plane"} withParentBlog:nil];
 //    [self createBlog:@{@"displayName":@"/DRIVE",        @"host":@"drive.jalopnik.com",          @"id":@(468728290)} withParentBlog:blogJalopnik];
     [self createBlog:@{@"displayName":@"Foxtrot Alpha", @"host":@"foxtrotalpha.jalopnik.com",   @"id":@(1527265188)} withParentBlog:blogJalopnik];
 //    [self createBlog:@{@"displayName":@"Buyer's Guide", @"host":@"buyersguide.jalopnik.com",    @"id":@(1634521805)} withParentBlog:blogJalopnik];
 //    [self createBlog:@{@"displayName":@"The Garage",    @"host":@"thegarage.jalopnik.com",      @"id":@(1593200293)} withParentBlog:blogJalopnik];
-//    [self createBlog:@{@"displayName":@"Code 3",        @"host":@"code3.jalopnik.com",          @"id":@(1567547931)} withParentBlog:blogJalopnik];
+    [self createBlog:@{@"displayName":@"Code 3",        @"host":@"code3.jalopnik.com",          @"id":@(1567547931)} withParentBlog:blogJalopnik];
     
-    Blog *blogJezebel = [self createBlog:@{@"displayName":@"Jezebel", @"host":@"jezebel.com", @"id":@(39), @"topic" : @"Women"} withParentBlog:nil];
+    Blog *blogJezebel = [self createBlog:@{@"displayName":@"Jezebel", @"host":@"jezebel.com", @"id":@(39), @"topic" : @"Women, Fashion, Celebrity"} withParentBlog:nil];
     [self createBlog:@{@"displayName":@"kitchenette",           @"host":@"kitchenette.jezebel.com",         @"id":@(1474956711)} withParentBlog:blogJezebel];
 //    [self createBlog:@{@"displayName":@"Flygirl",               @"host":@"flygirl.jezebel.com",             @"id":@(1508468098)} withParentBlog:blogJezebel];
 //    [self createBlog:@{@"displayName":@"That's What She Said",  @"host":@"thatswhatshesaid.jezebel.com",    @"id":@(1603056322)} withParentBlog:blogJezebel];
@@ -159,8 +159,9 @@
 //    [self createBlog:@{@"displayName":@"Pocket Monster",    @"host":@"pocketmonster.kotaku.com",    @"id":@(1597207345)} withParentBlog:blogKotaku];
 //    [self createBlog:@{@"displayName":@"The Bests",         @"host":@"thebests.kotaku.com",         @"id":@(1633980057)} withParentBlog:blogKotaku];
     
-    Blog *blogLifehacker = [self createBlog:@{@"displayName":@"Lifehacker", @"host":@"lifehacker.com", @"id":@(17), @"topic" : @"Hacker"} withParentBlog:nil];
+    Blog *blogLifehacker = [self createBlog:@{@"displayName":@"Lifehacker", @"host":@"lifehacker.com", @"id":@(17), @"topic" : @"Life Hacking"} withParentBlog:nil];
     [self createBlog:@{@"displayName":@"Lifehacker After Hours",    @"host":@"afterhours.lifehacker.com",   @"id":@(1502188174)} withParentBlog:blogLifehacker];
+//    [self createBlog:@{@"displayName":@"Lifehacker 10",             @"host":@"lifehacker10.lifehacker.com", @"id":@(1634899095)} withParentBlog:blogLifehacker];
 //    [self createBlog:@{@"displayName":@"Two Cents",                 @"host":@"twocents.lifehacker.com",     @"id":@(1535289086)} withParentBlog:blogLifehacker];
 //    [self createBlog:@{@"displayName":@"Vitals",                    @"host":@"vitals.lifehacker.com",       @"id":@(1634294947)} withParentBlog:blogLifehacker];
     [self createBlog:@{@"displayName":@"Skillet",                   @"host":@"skillet.lifehacker.com",      @"id":@(1634384901)} withParentBlog:blogLifehacker];
