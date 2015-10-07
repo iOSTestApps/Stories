@@ -13,7 +13,6 @@
 		91E4CBFE1BB943600059C79B /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4CBFD1BB943600059C79B /* ArticleViewController.m */; };
 		91E4CC011BB943600059C79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E4CBFF1BB943600059C79B /* Main.storyboard */; };
 		91E4CC061BB943600059C79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E4CC051BB943600059C79B /* Assets.xcassets */; };
-		91E4CC091BB943600059C79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E4CC071BB943600059C79B /* LaunchScreen.storyboard */; };
 		91E4CC141BB943600059C79B /* StoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4CC131BB943600059C79B /* StoriesTests.m */; };
 		91E4CC1F1BB943600059C79B /* StoriesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4CC1E1BB943600059C79B /* StoriesUITests.m */; };
 		91E4CC2D1BB949E20059C79B /* PMN_Caecilia_45_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E4CC2C1BB949E20059C79B /* PMN_Caecilia_45_Light.ttf */; settings = {ASSET_TAGS = (); }; };
@@ -82,7 +81,6 @@
 		91E4CBFD1BB943600059C79B /* ArticleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		91E4CC001BB943600059C79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91E4CC051BB943600059C79B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		91E4CC081BB943600059C79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E4CC0A1BB943600059C79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91E4CC0F1BB943600059C79B /* Stories.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stories.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E4CC131BB943600059C79B /* StoriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoriesTests.m; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 				91E4CBF91BB943600059C79B /* AppDelegate.h */,
 				91E4CBFA1BB943600059C79B /* AppDelegate.m */,
 				91E4CBFF1BB943600059C79B /* Main.storyboard */,
-				91E4CC071BB943600059C79B /* LaunchScreen.storyboard */,
 				91E4CBF61BB943600059C79B /* Supporting Files */,
 			);
 			path = Stories;
@@ -501,7 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E4CC341BB94DD40059C79B /* SF-UI-Display-Semibold.otf in Resources */,
-				91E4CC091BB943600059C79B /* LaunchScreen.storyboard in Resources */,
 				91E4CC331BB94DD40059C79B /* SF-UI-Display-Heavy.otf in Resources */,
 				91E4CC321BB94DD40059C79B /* SF-UI-Display-Bold.otf in Resources */,
 				91E4CC2D1BB949E20059C79B /* PMN_Caecilia_45_Light.ttf in Resources */,
@@ -620,14 +616,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		91E4CC071BB943600059C79B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91E4CC081BB943600059C79B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -717,6 +705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -739,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
