@@ -59,6 +59,7 @@
     [self.pageControl addTarget:self action:@selector(pageAction) forControlEvents:UIControlEventValueChanged];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageIndexChanged:) name:kPageIndexChange object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageControlCount:) name:kPagePostNumber object:nil];
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -85,6 +86,7 @@
     [self setBlogInfo:blog forButton:self.blogButton];
     [self saveBlog:blog.blogID];
     self.currentBlog = blog;
+    self.pageControl.currentPage = 0;
 }
 
 -(void)blogHasBeenSelected:(NSNumber *)blogID
@@ -185,6 +187,9 @@
         if([blog.blogID isEqualToNumber:self.currentBlog.blogID]){
             continue;
         }
+        if(self.currentBlog.parentBlog != nil && [blog.blogID isEqualToNumber:self.currentBlog.parentBlog.blogID]){
+            continue;
+        }
         UIButton *button = buttons[buttonIndex];
         [self setBlogInfo:blog forButton:button];
         button.tag = blogIndex;
@@ -201,6 +206,12 @@
 {
     NSInteger pageIndex = [notification.userInfo[@"pageIndex"] integerValue];
     self.pageControl.currentPage = pageIndex;
+}
+
+- (void)pageControlCount:(NSNotification *)notification
+{
+    NSInteger pageCount = [notification.userInfo[@"postCount"] integerValue];
+    self.pageControl.numberOfPages = pageCount;
 }
 
 @end

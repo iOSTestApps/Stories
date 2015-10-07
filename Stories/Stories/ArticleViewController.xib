@@ -81,6 +81,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
                     <animations/>
                     <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Ye4-fF-0e3"/>
+                    </connections>
                 </webView>
             </subviews>
             <animations/>

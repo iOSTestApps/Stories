@@ -11,6 +11,7 @@
 
 #define kPageControlChange @"kPageControlChange"
 #define kPageIndexChange @"kPageIndexChange"
+#define kPagePostNumber @"kPagePostNumber"
 
 @interface TopPostsForBlogViewController : UIViewController
 

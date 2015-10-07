@@ -83,6 +83,10 @@
 
 - (void)fetchTopPostsForBlog:(NSString *)blogHost withSection:(NSString *)section withLimit:(NSUInteger)limit completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler
 {
+    if(blogHost == nil)
+    {
+        int a = 0;
+    }
     static NSString *topPostBase = @"http://kinja.com/api/chartbeat/toppostsextended?host=%@&limit=%lu";
     static NSString *topPostBaseSection = @"http://kinja.com/api/chartbeat/toppostsextended?host=%@&limit=%lu&section=%@";
     NSString *topPostForHost = section == nil ?

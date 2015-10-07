@@ -197,7 +197,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owv-D4-zLa">
-                                        <rect key="frame" x="8" y="0.0" width="160" height="50"/>
+                                        <rect key="frame" x="8" y="0.0" width="452" height="50"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="xFp-bf-VNC"/>
@@ -207,6 +207,11 @@
                                         <state key="normal" title="BLOG NAME">
                                             <color key="titleColor" red="0.7803921568627451" green="0.22352941176470589" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="xFp-bf-VNC"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="blogButtonDidPress:" destination="Ia0-iF-Ybu" eventType="touchUpInside" id="XPo-10-cRr"/>
                                         </connections>
@@ -225,6 +230,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="Gwf-gw-MOC" firstAttribute="leading" secondItem="Owv-D4-zLa" secondAttribute="trailing" constant="20" id="5EM-pO-qcM"/>
                                     <constraint firstItem="Owv-D4-zLa" firstAttribute="leading" secondItem="C5q-wd-3Jl" secondAttribute="leading" constant="8" id="5nl-Zi-UEA"/>
                                     <constraint firstAttribute="trailing" secondItem="NwH-6C-O1G" secondAttribute="trailing" id="HaL-jG-sJB"/>
                                     <constraint firstItem="NwH-6C-O1G" firstAttribute="leading" secondItem="C5q-wd-3Jl" secondAttribute="leading" id="PjP-Ua-bhA"/>

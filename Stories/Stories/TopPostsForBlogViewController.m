@@ -128,6 +128,8 @@
 //    for(Post *post in self.posts) {
 //        NSLog(@"%@ %@", post.postID, post.postHeadline);
 //    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kPagePostNumber object:nil userInfo:@{@"postCount": [NSNumber numberWithInteger:[self.posts count]]}];
 }
 
 - (void)fetchPostsFromAPI

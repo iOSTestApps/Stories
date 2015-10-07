@@ -31,13 +31,13 @@
     NSString *cssStyle = @"<style type=\"text/css\">body {padding-top:15px;font-family: Caecilia; color:#2C3037;padding-right: 10px;padding-left: 10px;line-height: 160%%;font-size: 120%%;background-color:#F8F9FA;} \
                     h1{font-family: SF UI Display;line-height: 120%%;font-size: 175%%;} \
                     h2{font-family: SF UI Display;line-height: 115%%;font-size: 130%%;} \
-                    h3{font-family: SF UI Display;line-height: 110%%;font-size: 90%%;} \
-                    h4{font-family: SF UI Display;line-height: 100%%;font-size: 80%%;} \
-                    a:link{ color: #35509A; text-decoration: none; } \
-                    a:visited{ color: #35509A; } \
-                    a:hover{ color: #35509A; } \
-                    a:active { color: #35509A; } \
-                    blockquote {background: #f9f9f9;border-left: 10px solid #ccc;margin: 1.5em 5px;padding: 0.5em 10px; font-size: 90%;} \
+                    h3{font-family: SF UI Display;line-height: 110%%;font-size: 100%%;} \
+                    h4{font-family: SF UI Display;line-height: 100%%;font-size: 90%%;} \
+                    a:link{ color: #457B9D; text-decoration: none; } \
+                    a:visited{ color: #457B9D; } \
+                    a:hover{ color: #457B9D; } \
+                    a:active { color: #457B9D; } \
+                    blockquote {background: #f9f9f9;border-left: 8px solid #ccc;margin: 1.5em 5px;padding: 0.5em 10px; font-size: 90%;} \
                     blockquote p { display: inline;} \
         </style>";
     NSString *html = [NSString stringWithFormat:@"<html>%@<body><h1>%@</h1><h3>%@ • %@</h3>%@<body></html>", cssStyle, self.post.postHeadline, self.post.authorName, [self getDateAsEnglish], display];
@@ -98,13 +98,12 @@
                                                                value:nil] build]];    // Event value
     }];
 
-
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 #pragma mark - webview delegate
 
--(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType
+-(BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType
 {
     if ( inType == UIWebViewNavigationTypeLinkClicked ) {
         [[UIApplication sharedApplication] openURL:[inRequest URL]];
