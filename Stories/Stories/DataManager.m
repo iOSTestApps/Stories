@@ -359,7 +359,7 @@
         [posts addObject:post.postID];
     }
  
-    [self saveInsertionContext];
+    //[self saveInsertionContext];
     
     return posts;
 }
