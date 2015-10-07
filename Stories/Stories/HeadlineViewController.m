@@ -15,6 +15,7 @@
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
+#import "Reachability.h"
 
 @interface HeadlineViewController ()<NSURLSessionDataDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate>
 @property (weak, nonatomic) IBOutlet UIView *blackBgView;
@@ -132,11 +133,28 @@
 
 - (NSString *)getImageURLToDownload
 {
-    NSString *url = self.post.image.imageURL;
-    if([url containsString:@",w_320/"])
-        url = [NSString stringWithFormat:@"https://i.kinja-img.com/gawker-media/image/upload/%@.jpg", self.post.image.imageID];
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
     
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    
+    NSString *url = self.post.image.imageURL;
+    if (status == ReachableViaWiFi)
+    {
+        url = [self originalUploadedImage];
+    }
+    else if (status == ReachableViaWWAN)
+    {
+         if([url containsString:@",w_320/"])
+             url = [NSString stringWithFormat:@"https://i.kinja-img.com/gawker-media/image/upload/%@.jpg", self.post.image.imageID];
+    }
+
     return [url stringByReplacingOccurrencesOfString:@".gif" withString:@".jpg" ];
+}
+
+- (NSString *)originalUploadedImage
+{
+    return [NSString stringWithFormat:@"https://i.kinja-img.com/gawker-media/image/upload/%@.jpg", self.post.image.imageID];
 }
 
 - (BOOL)loadImageFromCache

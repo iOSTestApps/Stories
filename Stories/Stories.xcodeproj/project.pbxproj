@@ -38,6 +38,7 @@
 		91EA539C1BC3B95A001607BA /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA539B1BC3B95A001607BA /* APIClient.m */; settings = {ASSET_TAGS = (); }; };
 		91EA539E1BC3D50D001607BA /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91EA539D1BC3D50D001607BA /* ArticleViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		91EA53A11BC44AA9001607BA /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53A01BC44AA9001607BA /* NSDate+Utilities.m */; settings = {ASSET_TAGS = (); }; };
+		91EA53A51BC52010001607BA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA53A41BC52010001607BA /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2251BB97ED40033E44D /* UIViewController+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2241BB97ED40033E44D /* UIViewController+Utilities.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2321BB9C6B80033E44D /* Image+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2271BB9C6B80033E44D /* Image+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		91ECA2331BB9C6B80033E44D /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECA2291BB9C6B80033E44D /* Image.m */; settings = {ASSET_TAGS = (); }; };
@@ -127,6 +128,8 @@
 		91EA539D1BC3D50D001607BA /* ArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
 		91EA539F1BC44AA9001607BA /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		91EA53A01BC44AA9001607BA /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		91EA53A31BC52010001607BA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		91EA53A41BC52010001607BA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		91ECA2231BB97ED40033E44D /* UIViewController+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utilities.h"; sourceTree = "<group>"; };
 		91ECA2241BB97ED40033E44D /* UIViewController+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utilities.m"; sourceTree = "<group>"; };
 		91ECA2261BB9C6B80033E44D /* Image+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Image+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -333,6 +336,15 @@
 			name = GoogleAnalytics;
 			sourceTree = "<group>";
 		};
+		91EA53A21BC51FFD001607BA /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				91EA53A31BC52010001607BA /* Reachability.h */,
+				91EA53A41BC52010001607BA /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		91F68BB71BBAB96E00C2669B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +363,7 @@
 		91FE509C1BBC0F7A007FEC23 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				91EA53A21BC51FFD001607BA /* Reachability */,
 				91EA53811BC28304001607BA /* libsqlite3.tbd */,
 				91EA537F1BC282FD001607BA /* libz.tbd */,
 				91EA536E1BC281D6001607BA /* GoogleAnalytics */,
@@ -546,6 +559,7 @@
 				91F68BC31BBABC6A00C2669B /* NSDictionary+Utilities.m in Sources */,
 				91E4CBFB1BB943600059C79B /* AppDelegate.m in Sources */,
 				91ECA2321BB9C6B80033E44D /* Image+CoreDataProperties.m in Sources */,
+				91EA53A51BC52010001607BA /* Reachability.m in Sources */,
 				91E4CC491BB975F50059C79B /* HeadlineViewController.m in Sources */,
 				91F68BC01BBABA6F00C2669B /* NSString+Utilities.m in Sources */,
 				91E4CBF81BB943600059C79B /* main.m in Sources */,
