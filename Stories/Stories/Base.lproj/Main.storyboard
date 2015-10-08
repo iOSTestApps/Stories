@@ -161,18 +161,31 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="888-Tx-dPY" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="1ac-Ks-dXd"/>
                                     <constraint firstAttribute="trailing" secondItem="REB-BQ-fcT" secondAttribute="trailing" constant="8" id="4Ht-t0-tZ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="888-Tx-dPY" secondAttribute="trailing" constant="8" id="7F9-tf-ab5"/>
                                     <constraint firstItem="4e1-HM-PDe" firstAttribute="top" secondItem="FFQ-0l-3Ww" secondAttribute="top" constant="8" id="BQx-49-W19"/>
                                     <constraint firstItem="c13-Mk-bK1" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Eie-h3-Qie"/>
+                                    <constraint firstAttribute="trailing" secondItem="c13-Mk-bK1" secondAttribute="trailing" constant="8" id="GOM-sN-Ibp"/>
                                     <constraint firstItem="4e1-HM-PDe" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Gym-TM-sH7"/>
+                                    <constraint firstItem="c13-Mk-bK1" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Hj6-Qj-PI2"/>
                                     <constraint firstItem="z9Q-Gu-Qjw" firstAttribute="top" secondItem="4e1-HM-PDe" secondAttribute="bottom" id="IG7-DI-RMg"/>
+                                    <constraint firstAttribute="trailing" secondItem="4e1-HM-PDe" secondAttribute="trailing" constant="8" id="K48-ug-jFT"/>
                                     <constraint firstAttribute="bottom" secondItem="REB-BQ-fcT" secondAttribute="bottom" constant="8" id="L48-KQ-ucn"/>
+                                    <constraint firstAttribute="trailing" secondItem="eIH-rP-eU1" secondAttribute="trailing" constant="8" id="Ljl-8E-24u"/>
                                     <constraint firstAttribute="trailing" secondItem="888-Tx-dPY" secondAttribute="trailing" constant="8" id="NCD-dB-ooj"/>
+                                    <constraint firstItem="4e1-HM-PDe" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="OYp-yI-SUF"/>
+                                    <constraint firstItem="AIa-o1-Eb5" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="RAv-DB-TxA"/>
                                     <constraint firstItem="REB-BQ-fcT" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Udx-Zr-aJ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="AIa-o1-Eb5" secondAttribute="trailing" constant="8" id="X9l-ZY-0Oi"/>
+                                    <constraint firstItem="z9Q-Gu-Qjw" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="YDB-M0-aqu"/>
+                                    <constraint firstAttribute="trailing" secondItem="z9Q-Gu-Qjw" secondAttribute="trailing" constant="8" id="a97-x4-Wrn"/>
                                     <constraint firstAttribute="trailing" secondItem="eIH-rP-eU1" secondAttribute="trailing" constant="8" id="aRQ-W0-MZ0"/>
                                     <constraint firstItem="z9Q-Gu-Qjw" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="ctn-FL-ltI"/>
+                                    <constraint firstAttribute="trailing" secondItem="REB-BQ-fcT" secondAttribute="trailing" constant="8" id="fME-US-eVE"/>
                                     <constraint firstAttribute="trailing" secondItem="z9Q-Gu-Qjw" secondAttribute="trailing" constant="8" id="g5a-B4-4Jb"/>
                                     <constraint firstItem="c13-Mk-bK1" firstAttribute="top" secondItem="AIa-o1-Eb5" secondAttribute="bottom" id="gh3-Ho-0I1"/>
+                                    <constraint firstItem="eIH-rP-eU1" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="jJe-1t-eMt"/>
                                     <constraint firstItem="888-Tx-dPY" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="m63-OJ-amf"/>
                                     <constraint firstItem="AIa-o1-Eb5" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="qP8-bO-WhN"/>
                                     <constraint firstItem="eIH-rP-eU1" firstAttribute="top" secondItem="888-Tx-dPY" secondAttribute="bottom" id="rCp-EA-3xt"/>
@@ -182,8 +195,27 @@
                                     <constraint firstAttribute="trailing" secondItem="4e1-HM-PDe" secondAttribute="trailing" constant="8" id="ub1-q4-FD9"/>
                                     <constraint firstItem="eIH-rP-eU1" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="vAh-KD-5lr"/>
                                     <constraint firstItem="REB-BQ-fcT" firstAttribute="top" secondItem="c13-Mk-bK1" secondAttribute="bottom" id="wNu-Zo-Ya9"/>
+                                    <constraint firstItem="REB-BQ-fcT" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="x0P-5E-IWv"/>
                                     <constraint firstAttribute="trailing" secondItem="AIa-o1-Eb5" secondAttribute="trailing" constant="8" id="xKo-ci-Jih"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Gym-TM-sH7"/>
+                                        <exclude reference="ub1-q4-FD9"/>
+                                        <exclude reference="ctn-FL-ltI"/>
+                                        <exclude reference="g5a-B4-4Jb"/>
+                                        <exclude reference="NCD-dB-ooj"/>
+                                        <exclude reference="m63-OJ-amf"/>
+                                        <exclude reference="aRQ-W0-MZ0"/>
+                                        <exclude reference="vAh-KD-5lr"/>
+                                        <exclude reference="qP8-bO-WhN"/>
+                                        <exclude reference="xKo-ci-Jih"/>
+                                        <exclude reference="Eie-h3-Qie"/>
+                                        <exclude reference="t0z-G4-x6B"/>
+                                        <exclude reference="4Ht-t0-tZ7"/>
+                                        <exclude reference="Udx-Zr-aJ0"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-wd-3Jl" userLabel="ToolBar">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
