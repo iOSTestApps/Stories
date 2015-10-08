@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleViewController">
             <connections>
+                <outlet property="shareButton" destination="ERW-ta-cWV" id="Srz-9X-D0E"/>
                 <outlet property="view" destination="iN0-l3-epB" id="qz1-ca-vy2"/>
                 <outlet property="webView" destination="S74-U3-Gjr" id="Yf1-bt-oeq"/>
             </connections>

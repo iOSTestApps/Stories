@@ -16,6 +16,7 @@
 @interface ArticleViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
 
@@ -109,6 +110,11 @@
                                                                label:activityType          // Event label
                                                                value:nil] build]];    // Event value
     }];
+    
+    if ( [activityVC respondsToSelector:@selector(popoverPresentationController)] ) {
+        // iOS8, http://stackoverflow.com/questions/25644054/uiactivityviewcontroller-crashing-on-ios8-ipads
+        activityVC.popoverPresentationController.sourceView = self.shareButton;
+    }
 
     [self presentViewController:activityVC animated:YES completion:nil];
 }
