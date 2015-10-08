@@ -161,6 +161,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="0fS-pe-LNt"/>
                                     <constraint firstItem="888-Tx-dPY" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="1ac-Ks-dXd"/>
                                     <constraint firstAttribute="trailing" secondItem="REB-BQ-fcT" secondAttribute="trailing" constant="8" id="4Ht-t0-tZ7"/>
                                     <constraint firstAttribute="trailing" secondItem="888-Tx-dPY" secondAttribute="trailing" constant="8" id="7F9-tf-ab5"/>
@@ -174,6 +175,7 @@
                                     <constraint firstAttribute="bottom" secondItem="REB-BQ-fcT" secondAttribute="bottom" constant="8" id="L48-KQ-ucn"/>
                                     <constraint firstAttribute="trailing" secondItem="eIH-rP-eU1" secondAttribute="trailing" constant="8" id="Ljl-8E-24u"/>
                                     <constraint firstAttribute="trailing" secondItem="888-Tx-dPY" secondAttribute="trailing" constant="8" id="NCD-dB-ooj"/>
+                                    <constraint firstAttribute="width" constant="320" id="Nxx-He-mux"/>
                                     <constraint firstItem="4e1-HM-PDe" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="OYp-yI-SUF"/>
                                     <constraint firstItem="AIa-o1-Eb5" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="RAv-DB-TxA"/>
                                     <constraint firstItem="REB-BQ-fcT" firstAttribute="leading" secondItem="FFQ-0l-3Ww" secondAttribute="leading" constant="8" id="Udx-Zr-aJ0"/>
@@ -200,6 +202,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="0fS-pe-LNt"/>
+                                        <exclude reference="Nxx-He-mux"/>
                                         <exclude reference="Gym-TM-sH7"/>
                                         <exclude reference="ub1-q4-FD9"/>
                                         <exclude reference="ctn-FL-ltI"/>
@@ -214,6 +218,16 @@
                                         <exclude reference="t0z-G4-x6B"/>
                                         <exclude reference="4Ht-t0-tZ7"/>
                                         <exclude reference="Udx-Zr-aJ0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0fS-pe-LNt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Nxx-He-mux"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -299,6 +313,16 @@
                             <mask key="constraints">
                                 <exclude reference="5NC-MT-0jA"/>
                                 <exclude reference="Klc-iE-o4W"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="4DG-vl-LNE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="4DG-vl-LNE"/>
                             </mask>
                         </variation>
                     </view>
